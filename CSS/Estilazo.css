@@ -11,7 +11,6 @@ body {
     background-color: #f0f0f0; /* Fondo */
     color: #333; /* Texto */
     cursor: url('../Images/Cursor.png'), pointer;
-
 }
 
 .icon {
@@ -28,12 +27,10 @@ body {
 header {
     background-color: #705b5bc2; /* Fondo del encabezado */
     color: white; /* Color de texto */
-    padding-top: 2%; /* Espaciado alrededor */
-    padding-right: 7%;
-    padding-bottom: 2%;
-    padding-left: 2%;
+    padding: 1% 10%; /* Espaciado horizontal más equilibrado */
     display: flex;
     justify-content: space-between;
+    align-items: center; /* Asegura que los elementos estén alineados verticalmente */
 }
 
 header img {
@@ -43,8 +40,6 @@ header img {
 /* Menú */
 nav ul {
     list-style-type: none; /* Eliminar viñetas */
-    margin-top: 3%;
-    padding: 0;
     display: flex; /* Mostrar en fila */
     justify-content: flex-end;
 }
@@ -58,13 +53,30 @@ nav ul li a {
     font-size: 1.2rem;
     text-transform: uppercase;
     padding-right: 2%;
-    color:whitesmoke; /* Color de los enlaces */
+    color: whitesmoke; /* Color de los enlaces */
     text-decoration: none;
 }
 
 nav ul li a:hover {
     text-decoration: underline;
     font-weight: 800;
+}
+
+/* Submenú */
+nav ul li ul {
+    display: none;
+    position: absolute;
+    background-color: #705b5bc2;
+    padding: 10px;
+}
+
+nav ul li:hover ul {
+    display: block; /* Muestra el submenú al hacer hover */
+}
+
+nav ul li ul li {
+    display: block;
+    margin: 10px 0;
 }
 
 /* Imagen principal */
@@ -115,20 +127,19 @@ nav ul li a:hover {
     border-radius: 10px; /* Esquinas redondeadas */
 }
 
-footer{
+/* Footer */
+footer {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    height: 250px;
+    height: 150px;
 }
 
-footer img{
-    max-width:  2rem ;
+footer img {
+    max-width: 3rem;
     width: 100px;
     height: auto;
-    margin-right:  .1%;
 }
-
 
 /* Media Queries */
 @media (max-width: 768px) {
@@ -161,12 +172,3 @@ footer img{
     }
 }
 
-
-footer{
-    height: 150px;
-    justify-content: space-evenly;
-}
-
-footer img{
-    max-width: 3rem;
-}

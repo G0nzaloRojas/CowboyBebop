@@ -19,9 +19,9 @@
         <nav id="Menu" class="">
             <ul id="menu_bar">    
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">Sobre el Anime</a>
+                <li><a href="#">Episodios</a>
                     <ul>
-                        <li><a href="episodios.html">Episodios</a></li>
+                        <li><a href="episodios.html">Lista de Episodios</a></li>
                         <li><a href="analisis.html">Analisis</a></li>
                     </ul>
                 </li> 
@@ -38,9 +38,7 @@
             </ul>
         </nav>
     </header>
-
-    <h1>EPISODIOS</h1>
-   
+  
     
    <footer>
         <img src="Images/Redes/Amazon.png" alt="Amazon">
@@ -50,15 +48,15 @@
    </footer>
 
    <script type="text/javascript">
-        function myFunction() {
-         var x = document.getElementById("menu_bar");
-         if (x.className === "") {
-           x.className += " responsive";
-         } else {
-            x.className = "";
+        function toggleMenu() {
+            var menu = document.getElementById("menu_bar");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
             }
-         }
+        }
     </script>
-    
+
 </body>
 </html>
