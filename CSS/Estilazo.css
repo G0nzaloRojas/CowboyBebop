@@ -115,7 +115,7 @@ nav ul li a:hover {
     border-radius: 10px; /* Esquinas redondeadas */
 }
 
-fotter{
+footer{
     display: flex;
     justify-content: center;
     align-items: center;
