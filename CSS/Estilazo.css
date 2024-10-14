@@ -115,6 +115,21 @@ nav ul li a:hover {
     border-radius: 10px; /* Esquinas redondeadas */
 }
 
+fotter{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+}
+
+footer img{
+    max-width:  2.5rem ;
+    width: 100px;
+    height: auto;
+    margin-right:  .5% ;
+}
+
+
 /* Media Queries */
 @media (max-width: 768px) {
     .icon {
