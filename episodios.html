@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cowboy Bebop</title>
+    <link rel="stylesheet" type="text/css" href="CSS/Estilazo.css">
+    <link rel="icon" type="image/png" href="Images/Icono.png">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    
+    <header class="Encabezado">
+        <div>
+            <a href="index.html"><img src="Images/Logo.png" alt="Cowboy logo"></a>
+        </div>
+
+        <nav id="Menu" class="">
+            <ul>    
+                <li><a href="index.html">Home </a></li>
+                <li><a href="episodios.html">Episodios </a></li> 
+                <li><a href="">Personajes </a></li>    
+                <li><a href="">Banda Sonora (Soundtrack)</a>
+                    <ul>
+                        <li><a href="">Reproductor</a></li>
+                        <li><a href="">Influencia en la Música</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Galería de Imágenes</a></li> 
+                <li><a href="">Contacto</a></li>     
+            </ul>
+            <div class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+  
+   
+    
+   <footer>
+        <img src="Images/Redes/Amazon.png" alt="Amazon">
+        <img src="Images/Redes/Crunchyroll.png" alt="Crunchyroll">
+        <img src="Images/Redes/Instagram.png" alt="Instagram">
+        <img src="Images/Redes/Netflix.png" alt="Netflix">
+   </footer>
+
+   <script type="text/javascript">
+        function myFunction() {
+         var x = document.getElementById("menu_bar");
+         if (x.className === "") {
+           x.className += " responsive";
+         } else {
+            x.className = "";
+            }
+         }
+    </script>
+    
+</body>
+</html>
