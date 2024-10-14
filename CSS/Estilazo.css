@@ -119,14 +119,14 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 350px;
+    height: 250px;
 }
 
 footer img{
-    max-width:  2.5rem ;
+    max-width:  2rem ;
     width: 100px;
     height: auto;
-    margin-right:  .5%;
+    margin-right:  .1%;
 }
 
 
@@ -163,7 +163,7 @@ footer img{
 
 
 footer{
-    height: 80px;
+    height: 150px;
     justify-content: space-evenly;
 }
 
