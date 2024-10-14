@@ -28,7 +28,10 @@ body {
 header {
     background-color: #705b5bc2; /* Fondo del encabezado */
     color: white; /* Color de texto */
-    padding: 4% 9%; /* Espaciado alrededor */
+    padding-top: 2%; /* Espaciado alrededor */
+    padding-right: 7%;
+    padding-bottom: 2%;
+    padding-left: 2%;
     display: flex;
     justify-content: space-between;
 }
@@ -48,11 +51,13 @@ nav ul {
 
 nav ul li {
     margin: 0 15px; /* Espaciado entre elementos */
+    display: inline-block;
 }
 
 nav ul li a {
     font-size: 1.2rem;
     text-transform: uppercase;
+    padding-right: 2%;
     color:whitesmoke; /* Color de los enlaces */
     text-decoration: none;
 }
