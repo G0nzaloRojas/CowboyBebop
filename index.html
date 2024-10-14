@@ -16,11 +16,11 @@
             <a href="index.html"><img src="Images/Logo.png" alt="Cowboy logo"></a>
         </div>
 
-        <nav id="Menu" class="">
+        <nav id="Menu">
             <ul>    
-                <li><a href="index.html">Home </a></li>
-                <li><a href="episodios.html">Episodios </a></li> 
-                <li><a href="personajes.html">Personajes </a></li>    
+                <li><a href="index.html">Home</a></li>
+                <li><a href="episodios.html">Episodios</a></li> 
+                <li><a href="personajes.html">Personajes</a></li>    
                 <li><a href="#">Banda Sonora (Soundtrack)</a>
                     <ul>
                         <li><a href="">Reproductor</a></li>
@@ -30,7 +30,7 @@
                 <li><a href="galeria.html">Galería de Imágenes</a></li> 
                 <li><a href="contacto.html">Contacto</a></li>     
             </ul>
-            <div class="icon" onclick="myFunction()">
+            <div class="icon" onclick="toggleMenu()">
                 <i class="fa fa-bars"></i>
             </div>
         </nav>
@@ -60,15 +60,16 @@
         <img src="Images/Redes/Netflix.png" alt="Netflix">
    </footer>
 
+   
    <script type="text/javascript">
-        function myFunction() {
-         var x = document.getElementById("menu_bar");
-         if (x.className === "") {
-           x.className += " responsive";
-         } else {
-            x.className = "";
+        function toggleMenu() {
+            var x = document.getElementById("Menu").getElementsByTagName("ul")[0];
+            if (x.style.display === "block") {
+                x.style.display = "none";
+            } else {
+                x.style.display = "block";
             }
-         }
+        }
     </script>
 
 </body>

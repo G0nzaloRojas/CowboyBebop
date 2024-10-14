@@ -135,5 +135,8 @@ nav ul li a:hover {
     nav ul li a {
         font-size: 1.5rem; /* Aumentar tamaño en móvil */
     }
-}
 
+    nav ul.responsive {
+        display: block; /* Mostrar menú en móvil al hacer clic */
+    }
+}
