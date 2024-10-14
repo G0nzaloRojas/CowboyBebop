@@ -145,3 +145,13 @@ nav ul li a:hover {
         display: block; /* Mostrar menú en móvil al hacer clic */
     }
 }
+
+
+footer{
+    height: 80px;
+    justify-content: space-evenly;
+}
+
+footer img{
+    max-width: 3rem;
+}
