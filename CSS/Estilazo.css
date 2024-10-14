@@ -28,7 +28,7 @@ body {
 header {
     background-color: #705b5bc2; /* Fondo del encabezado */
     color: white; /* Color de texto */
-    padding: 3% 8%; /* Espaciado alrededor */
+    padding: 4% 9%; /* Espaciado alrededor */
     display: flex;
     justify-content: space-between;
 }
