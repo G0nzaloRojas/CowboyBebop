@@ -1,60 +1,55 @@
+/* General */
 * {
     padding: 0;
-    box-sizing: border-box;
     margin: 0;
+    box-sizing: border-box;
 }
 
-/* General */
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0; /* Fondo */
-    color: #333; /* Texto */
+    background-color: #f0f0f0;
+    color: #333;
     cursor: url('../Images/Cursor.png'), pointer;
-
 }
 
-.icon {
-    display: none; /* Ocultado por defecto */
-    color: white;
-    font-size: 24px;
-    cursor: pointer;
-    position: sticky;
-    right: 20px;
-    top: 20px;    
+ul {
+    list-style: none;
 }
 
-/* Encabezado */
+a {
+    text-decoration: none;
+}
+
+/* Header */
 header {
-    background-color: #705b5bc2; /* Fondo del encabezado */
-    color: white; /* Color de texto */
-    padding: 4% 9%; /* Espaciado alrededor */
+    background-color: #705b5bc2;
+    color: white;
+    padding: 10px;
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 header img {
-    max-height: 60px; /* Altura máxima del logo */
+    max-height: 60px;
 }
 
-/* Menú */
+/* Navigation */
 nav ul {
-    list-style-type: none; /* Eliminar viñetas */
-    margin-top: 3%;
-    padding: 0;
-    display: flex; /* Mostrar en fila */
+    display: flex;
     justify-content: flex-end;
+    padding: 0;
 }
 
 nav ul li {
-    margin: 0 15px; /* Espaciado entre elementos */
+    margin: 0 15px;
 }
 
 nav ul li a {
     font-size: 1.2rem;
+    color: whitesmoke;
     text-transform: uppercase;
-    color:whitesmoke; /* Color de los enlaces */
-    text-decoration: none;
 }
 
 nav ul li a:hover {
@@ -62,34 +57,43 @@ nav ul li a:hover {
     font-weight: 800;
 }
 
-/* Imagen principal */
+.icon {
+    display: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+/* Section and article */
 #Img {
     display: flex;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
+    justify-content: center;
+    align-items: center;
     margin: 20px 0;
 }
 
 #Img img {
-    width: 80%; /* Ajustar ancho */
-    height: auto; /* Mantener proporciones */
-    max-width: 1000px; /* Limitar ancho máximo */
-    border-radius: 10px; /* Esquinas redondeadas */
+    width: 80%;
+    height: auto;
+    max-width: 1000px;
+    border-radius: 10px;
 }
 
-/* Artículo */
 .article {
-    display: flex; /* Usar Flexbox */
+    display: flex;
     max-width: 800px;
-    margin: 20px auto; /* Centrar el artículo */
+    margin: 20px auto;
     padding: 20px;
-    background-color: white; /* Fondo */
+    background-color: white;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .article > div {
-    flex: 1; /* Flex para ocupar espacio igual */
+    flex: 1;
     margin: 10px;
 }
 
@@ -100,43 +104,49 @@ nav ul li a:hover {
 }
 
 #texto_article {
-    line-height: 1.6; /* Mejorar legibilidad */
+    line-height: 1.6;
 }
 
-/* Imagen dentro del artículo */
 #Img_Principal {
     width: 100%;
-    height: auto; /* Mantener proporciones */
-    border-radius: 10px; /* Esquinas redondeadas */
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
 }
 
 /* Media Queries */
 @media (max-width: 768px) {
     .icon {
-        display: block; /* Mostrar icono hamburguesa */
+        display: block;
     }
 
     nav ul {
-        display: none; /* Ocultar menú por defecto */
-        flex-direction: column; /* Columna para menú móvil */
-        position: absolute; /* Posicionar en el header */
-        background-color: #333; /* Fondo del menú móvil */
-        top: 70px;
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
         right: 0;
         width: 100%;
     }
 
     nav ul li {
-        margin: 0;
+        text-align: center;
         padding: 10px;
-        text-align: center; /* Centrar texto en menú móvil */
     }
 
     nav ul li a {
-        font-size: 1.5rem; /* Aumentar tamaño en móvil */
+        font-size: 1.5rem;
     }
 
     nav ul.responsive {
-        display: block; /* Mostrar menú en móvil al hacer clic */
+        display: block;
     }
 }

@@ -17,17 +17,17 @@
         </div>
 
         <nav id="Menu">
-            <ul>    
+            <ul id="menu_bar">    
                 <li><a href="index.html">Home</a></li>
                 <li><a href="episodios.html">Episodios</a></li> 
                 <li><a href="personajes.html">Personajes</a></li>    
-                <li><a href="#">Banda Sonora</a>
+                <li><a href="#">Banda Sonora (Soundtrack)</a>
                     <ul>
                         <li><a href="">Reproductor</a></li>
                         <li><a href="">Influencia en la Música</a></li>
                     </ul>
                 </li>
-                <li><a href="galeria.html">Galería</a></li> 
+                <li><a href="galeria.html">Galería de Imágenes</a></li> 
                 <li><a href="contacto.html">Contacto</a></li>     
             </ul>
             <div class="icon" onclick="toggleMenu()">
@@ -60,14 +60,13 @@
         <img src="Images/Redes/Netflix.png" alt="Netflix">
    </footer>
 
-   
    <script type="text/javascript">
         function toggleMenu() {
-            var x = document.getElementById("Menu").getElementsByTagName("ul")[0];
-            if (x.style.display === "block") {
-                x.style.display = "none";
+            var menu = document.getElementById("menu_bar");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
             } else {
-                x.style.display = "block";
+                menu.style.display = "block";
             }
         }
     </script>
