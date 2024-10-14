@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cowboy Bebop</title>
+    <link rel="stylesheet" type="text/css" href="CSS/Estilazo.css">
+    <link rel="icon" type="image/png" href="Images/Icono.png">    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    
+    <header class="Encabezado">
+        <div>
+            <img src="Images/Logo.png" alt="Cowboy logo">
+        </div>
+
+        <nav id="Menu" class="">
+            <ul>    
+                <li><a href="index.html">Home </a></li>
+                <li><a href="">Episodios </a></li> 
+                <li><a href="">Personajes </a></li>    
+                <li><a href="">Banda Sonora (Soundtrack)</a>
+                    <ul>
+                        <li><a href="">Reproductor</a></li>
+                        <li><a href="">Influencia en la Música</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Galería de Imágenes</a></li> 
+                <li><a href="">Contacto</a></li>     
+            </ul>
+            <div class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </div>
+        </nav>
+    </header>
+  
+    <section id="section">
+        <div id="Img">
+            <img src="Images/Cowboy_Bebop.png" alt="Cowboy Bebop logo">
+        </div>
+
+        <h1 id="titulo_article">Cowboy Bebop</h1>
+        <article class="article">
+            <div>
+                <p id="texto_article">En el futuro, nuestro sistema solar ha entrado a la era espacial y es posible viajar a distintos planetas en poco tiempo gracias a una serie de portales espaciales. Spike y Jet, un antiguo miembro de la mafia y un antiguo policía respectivamente, se ganan ahora la vida como cazarrecompensas y recorren el espacio atrapando a los criminales sobre cuyas cabezas hay recompensas. Los acompañan Faye, una misteriosa mujer que ha perdido la memoria y carga con una gran deuda, y Ed, una joven genio del hackeo que se comporta como un niño que solo busca divertirse.</p>      
+            </div>
+
+            <div>
+                <img id="Img_Principal" src="Images/Cowboy.png" alt="Poster Cowboy Bebop">
+            </div>
+        </article>
+    </section>
+    
+   <footer>
+        <img src="Images/Redes/Amazon.png" alt="Amazon">
+        <img src="Images/Redes/Crunchyroll.png" alt="Crunchyroll">
+        <img src="Images/Redes/Instagram.png" alt="Instagram">
+        <img src="Images/Redes/Netflix.png" alt="Netflix">
+   </footer>
+
+   <script type="text/javascript">
+        function myFunction() {
+         var x = document.getElementById("menu_bar");
+         if (x.className === "") {
+           x.className += " responsive";
+         } else {
+            x.className = "";
+            }
+         }
+    </script>
+
+
+
+</body>
+</html>

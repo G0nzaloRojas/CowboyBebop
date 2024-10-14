@@ -1,0 +1,139 @@
+* {
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+/* General */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Fondo */
+    color: #333; /* Texto */
+    cursor: url('../Images/Cursor.png'), pointer;
+
+}
+
+.icon {
+    display: none; /* Ocultado por defecto */
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    position: sticky;
+    right: 20px;
+    top: 20px;    
+}
+
+/* Encabezado */
+header {
+    background-color: #705b5bc2; /* Fondo del encabezado */
+    color: white; /* Color de texto */
+    padding: 2% 7%; /* Espaciado alrededor */
+    display: flex;
+    justify-content: space-between;
+}
+
+header img {
+    max-height: 60px; /* Altura máxima del logo */
+}
+
+/* Menú */
+nav ul {
+    list-style-type: none; /* Eliminar viñetas */
+    margin-top: 3%;
+    padding: 0;
+    display: flex; /* Mostrar en fila */
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin: 0 15px; /* Espaciado entre elementos */
+}
+
+nav ul li a {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color:whitesmoke; /* Color de los enlaces */
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+    font-weight: 800;
+}
+
+/* Imagen principal */
+#Img {
+    display: flex;
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center; /* Centrar verticalmente */
+    margin: 20px 0;
+}
+
+#Img img {
+    width: 80%; /* Ajustar ancho */
+    height: auto; /* Mantener proporciones */
+    max-width: 1000px; /* Limitar ancho máximo */
+    border-radius: 10px; /* Esquinas redondeadas */
+}
+
+/* Artículo */
+.article {
+    display: flex; /* Usar Flexbox */
+    max-width: 800px;
+    margin: 20px auto; /* Centrar el artículo */
+    padding: 20px;
+    background-color: white; /* Fondo */
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.article > div {
+    flex: 1; /* Flex para ocupar espacio igual */
+    margin: 10px;
+}
+
+#titulo_article {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+#texto_article {
+    line-height: 1.6; /* Mejorar legibilidad */
+}
+
+/* Imagen dentro del artículo */
+#Img_Principal {
+    width: 100%;
+    height: auto; /* Mantener proporciones */
+    border-radius: 10px; /* Esquinas redondeadas */
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .icon {
+        display: block; /* Mostrar icono hamburguesa */
+    }
+
+    nav ul {
+        display: none; /* Ocultar menú por defecto */
+        flex-direction: column; /* Columna para menú móvil */
+        position: absolute; /* Posicionar en el header */
+        background-color: #333; /* Fondo del menú móvil */
+        top: 70px;
+        right: 0;
+        width: 100%;
+    }
+
+    nav ul li {
+        margin: 0;
+        padding: 10px;
+        text-align: center; /* Centrar texto en menú móvil */
+    }
+
+    nav ul li a {
+        font-size: 1.5rem; /* Aumentar tamaño en móvil */
+    }
+}
+
