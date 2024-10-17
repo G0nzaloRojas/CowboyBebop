@@ -43,18 +43,56 @@
         </nav>
     </header>
 
-    <h1>Spike Spiegel</h1>
-     <section>
-            <article>
-                <div>
-                    <p> aqui hablos..</p>
-                </div>  
-
-            </article>
-
-     </section>
-
-
+    <section class="spike-section">
+        <article>
+            <div id="spike-info" class="spike-container">
+                <img src="Images/Personajes/Spike.gif" alt="Spike Spiegel" class="spike-image">
+                <div class="spike-description">
+                    <h1>Spike Spiegel</h1>
+                    <p>Aquí hablo sobre Spike y su historia...</p>
+                </div>
+            </div>  
+        </article>
+    </section>
+    
+    <section class="vicious_y_julia-section">
+        <h2>Fantasmas del pasado</h2>
+        <div class="card-container">
+            <!-- Carta de Vicious -->
+            <div class="card vicious-card">
+                <div class="image" style="background-image: url('Images/Personajes/Vicious.gif');"></div>
+                <div class="content">
+                    <span class="title">Vicious</span>
+                    <p class="desc">
+                        Vicious es el pj antagonista... 
+                        <span class="more-text">Aquí está el texto adicional sobre Vicious que se mostrará al hacer clic.</span>
+                    </p>
+                    <input type="checkbox" id="vicious-toggle" class="toggle">
+                    <label class="action" for="vicious-toggle">
+                        Find out more
+                        <span aria-hidden="true">→</span>
+                    </label>
+                </div>
+            </div>
+    
+            <!-- Carta de Julia -->
+            <div class="card julia-card">
+                <div class="image" style="background-image: url('Images/Personajes/Julia.gif');"></div>
+                <div class="content">
+                    <span class="title">Julia</span>
+                    <p class="desc">
+                        Julia es la figura clave... 
+                        <span class="more-text">Aquí está el texto adicional sobre Julia que se mostrará al hacer clic.</span>
+                    </p>
+                    <input type="checkbox" id="julia-toggle" class="toggle">
+                    <label class="action" for="julia-toggle">
+                        Find out more
+                        <span aria-hidden="true">→</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section>
     
    <footer>
         <img src="Images/Redes/Amazon.png" alt="Amazon">
