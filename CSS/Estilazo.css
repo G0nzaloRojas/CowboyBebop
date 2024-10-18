@@ -287,3 +287,45 @@ main.analisis{
     margin-top: 16px;
     color: #fff;
 }*/
+
+.album-container{
+    display: flex;
+    align-items: center;
+}
+
+.album-cover{
+    width: 350px;
+    height: auto;
+    margin-right: 20px;
+}
+
+.tracklist{
+    list-style: none;
+    padding: 0;
+}
+
+.tracklist li{
+    margin-bottom: 10px;
+}
+
+.player-controls{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.progress-bar{
+    width: 70%;
+    margin: 0 20px;
+}
+
+.rotating-logo{
+    width: 100px;
+    animation: spin 4s linear infinite;
+}
+
+@keyframes spin{
+    from{ transform: rotate(0deg);}
+    to{ transform: rotate(360deg);}
+}
