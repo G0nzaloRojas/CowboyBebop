@@ -43,25 +43,73 @@
         </nav>
     </header>
 
-    <h1>Reproductor</h1>
+    <div class="player-page">
+        <div class="content">
+            <div class="album-section">
+                <div class="album-cover-wrapper">
+                    <img src="Images/Portada.png" alt="Cowboy Bebop Cover" class="album-cover">
+                    <img src="Images/Cd.png" alt="CD" class="cd-disc">
+                </div>
+            </div>    
 
-    <div class="album-container"> 
-        <img src="Images/Portada (1).png" alt="Portada del Album" class="album-cover">
-        <ul class="tracklist">
-            <li>01 Tank!<span>3:30</span></li>
-            <li>02 Rush <span>3:34</span></li>
-            <li>03 Spokey Dokey <span>4:05</span></li>
-        </ul>
-    </div>
-   
-    <div class="player-controls">
-        <img src="Images/Portada (1).png" alt="Logo" class="rotating-logo">
-        <input type="range" class="progress-bar" min="0" max="100" value="50">
-        <button>Play</button>
-        <button>Pause</button>
+            <div class="tracklist-section">
+                <h1>COWBOY BEBOP SOUNDTRACK</h1>
+                <p>Seatbelts • 17 tracks • 53 minutes</p>
+                <ul class="track-list">
+                    <li>01 Tank!</li>
+                    <li>02 Rush</li>
+                    <li>03 Space Lion</li>
+                    <li>04...</li>
+                    <li>05...</li>
+                    <li>06...</li>
+                    <li>07...</li>
+                    <li>08...</li>
+                    <li>09...</li>
+                    <li>10...</li>
+                    <li>11...</li>
+                    <li>12...</li>
+                    <li>13...</li>
+                    <li>14...</li>
+                    <li>15...</li>
+                    <li>16...</li>
+                    <li>17...</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="controls-section">
+            <div class="progress-bar">
+                <div class="progress"></div>
+                <div class="album-logo">
+                    <img src="Images/Portada_redondo.png" alt="Cowboy Bebop Logo">
+                </div> 
+            </div>
+            
+            <div class="controls">
+                <button class="control-button" id="prevBtn">
+                    <img src="Images/AnteriorBtn.png" alt="Anterior">
+                </button>
+                <button class="control-button" id="playBtn">
+                    <img src="Images/PlayBtn.png" alt="Play">
+                </button>
+                <button class="control-button" id="pauseBtn">
+                    <img src="Images/PausaBtn.png" alt="Pausa">
+                </button>
+                <button class="control-button" id="nextBtn">
+                    <img src="Images/SiguienteBtn.png" alt="Siguiente">
+                </button>
+                <div class="volume-control">
+                    <button class="control-button" id="volumeBtn">
+                        <img src="Images/VolumenBtn.png" alt="Volumen">
+                    </button>
+                    <input type="range" min="0" max="1" step="0.01" value="1" class="volume-slider">
+                </div>
+            </div>
+        </div>
+
+        <audio id="audio-player" src=""></audio>
     </div>
 
-    
    <footer>
         <img src="Images/Redes/Amazon.png" alt="Amazon">
         <img src="Images/Redes/Crunchyroll.png" alt="Crunchyroll">
@@ -71,13 +119,13 @@
 
    <script type="text/javascript">
         function myFunction() {
-         var x = document.getElementById("menu_bar");
-         if (x.className === "") {
-           x.className += " responsive";
-         } else {
-            x.className = "";
+            var x = document.getElementById("menu_bar");
+            if (x.className === "") {
+                x.className += " responsive";
+            } else {
+                x.className = "";
             }
-         }
+        }
     </script>
     
 </body>
