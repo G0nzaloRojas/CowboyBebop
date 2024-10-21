@@ -6,7 +6,7 @@
     <title>Cowboy Bebop</title>
     <link rel="stylesheet" type="text/css" href="CSS/Estilazo.css">
     <link rel="icon" type="image/png" href="Images/Icono.png">    
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
 <body>
@@ -16,7 +16,7 @@
             <a href="index.html"><img src="Images/Logo.png" alt="Cowboy logo"></a>
         </div>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
-        <nav id="Menu" class="">
+        <nav id="Menu">
             <ul id="menu_bar">    
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#">Sobre el Anime</a>
@@ -58,21 +58,21 @@
                 <ul class="track-list">
                     <li>01 Tank!</li>
                     <li>02 Rush</li>
-                    <li>03 Space Lion</li>
-                    <li>04...</li>
-                    <li>05...</li>
-                    <li>06...</li>
-                    <li>07...</li>
-                    <li>08...</li>
-                    <li>09...</li>
-                    <li>10...</li>
-                    <li>11...</li>
-                    <li>12...</li>
-                    <li>13...</li>
-                    <li>14...</li>
-                    <li>15...</li>
-                    <li>16...</li>
-                    <li>17...</li>
+                    <li>03 Spokey Dokey</li>
+                    <li>04 Bad Dog No Biscuits</li>
+                    <li>05 Cat Blues</li>
+                    <li>06 Cosmos</li>
+                    <li>07 Space Lion</li>
+                    <li>08 Waltz for Zizi</li>
+                    <li>09 Piano Black</li>
+                    <li>10 Pot City</li>
+                    <li>11 Too Good Too Bad</li>
+                    <li>12 Car 24</li>
+                    <li>13 The Egg and I</li>
+                    <li>14 Felt Tip Pen</li>
+                    <li>15 Rain</li>
+                    <li>16 Digging My Potato</li>
+                    <li>17 Memory</li>
                 </ul>
             </div>
         </div>
@@ -87,37 +87,37 @@
             
             <div class="controls">
                 <button class="control-button" id="prevBtn">
-                    <img src="Images/AnteriorBtn.png" alt="Anterior">
+                    <i class="fas fa-backward" aria-hidden="true"></i>
                 </button>
                 <button class="control-button" id="playBtn">
-                    <img src="Images/PlayBtn.png" alt="Play">
+                    <i class="fas fa-play" aria-hidden="true"></i>
                 </button>
                 <button class="control-button" id="pauseBtn">
-                    <img src="Images/PausaBtn.png" alt="Pausa">
+                    <i class="fas fa-pause" aria-hidden="true"></i>
                 </button>
                 <button class="control-button" id="nextBtn">
-                    <img src="Images/SiguienteBtn.png" alt="Siguiente">
+                    <i class="fas fa-forward" aria-hidden="true"></i>
                 </button>
                 <div class="volume-control">
                     <button class="control-button" id="volumeBtn">
-                        <img src="Images/VolumenBtn.png" alt="Volumen">
+                        <i class="fas fa-volume-up" aria-hidden="true"></i>
                     </button>
                     <input type="range" min="0" max="1" step="0.01" value="1" class="volume-slider">
                 </div>
             </div>
         </div>
-
+        
         <audio id="audio-player" src=""></audio>
     </div>
 
-   <footer>
+    <footer>
         <img src="Images/Redes/Amazon.png" alt="Amazon">
         <img src="Images/Redes/Crunchyroll.png" alt="Crunchyroll">
         <img src="Images/Redes/Instagram.png" alt="Instagram">
         <img src="Images/Redes/Netflix.png" alt="Netflix">
-   </footer>
+    </footer>
 
-   <script type="text/javascript">
+    <script type="text/javascript">
         function myFunction() {
             var x = document.getElementById("menu_bar");
             if (x.className === "") {
@@ -130,4 +130,3 @@
     
 </body>
 </html>
-
