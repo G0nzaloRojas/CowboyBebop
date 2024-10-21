@@ -302,7 +302,7 @@ main.analisis{
     display: flex;
     justify-content: space-between;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1300px; /* Ajustado para más espacio */
 }
 
 .album-section {
@@ -312,8 +312,8 @@ main.analisis{
 
 .album-cover-wrapper {
     position: relative;
-    width: 350px;
-    height: 350px;
+    width: 400px;
+    height: 400px;
 }
 
 .album-cover {
@@ -327,33 +327,39 @@ main.analisis{
 .cd-disc {
     position: absolute;
     top: 50%;
-    left: 50%;
-    width: 80px;
-    height: 80px;
-    transform: translate(-50%, -50%);
+    right: -60px; /* Ajustado para asomar más */
+    width: 350px;
+    height: 350px;
+    transform: translate(0, -50%);
+    transition: opacity 0.5s ease;
+    opacity: 1; /* Visible por defecto */
+}
+
+.paused .cd-disc {
+    opacity: 0; /* Oculto cuando está en pausa */
 }
 
 .tracklist-section {
     margin-top: 20px;
     flex: 2;
-    padding-left: 20px;
+    padding-left: 60px; /* Más espacio entre la lista y el CD */
 }
 
 .tracklist-section h1 {
-    font-size: 24px;
+    font-size: 26px;
     margin-bottom: 10px;
-    color: #f2f2f2; /* Color del texto */
+    color: #333; /* Color oscuro para mayor visibilidad */
 }
 
 .tracklist-section p {
-    color: #666;
+    color: #333; /* Color oscuro para ver el nombre del artista y duración */
     font-size: 16px;
 }
 
 .track-list {
     list-style: none;
     padding: 0;
-    color: #f2f2f2; /* Color del texto */
+    color: #f2f2f2;
 }
 
 .track-list li {
@@ -362,98 +368,83 @@ main.analisis{
 }
 
 .track-list li:hover {
-    color: #1db954; /* Color al pasar el mouse */
+    color: #00ff00;
+    background-color: #333;
 }
 
 .progress-bar {
     position: relative;
-    width: 80%; /* Ajustar el ancho para centrar */
-    height: 8px; /* Aumentar la altura para mayor visibilidad */
+    width: 80%;
+    height: 5px; /* Barra de progreso más delgada */
     background-color: #ddd;
-    margin: 20px 0; /* Espacio arriba y abajo */
-    border-radius: 5px; /* Bordes redondeados */
+    margin: 20px 0;
+    border-radius: 5px;
 }
 
 .progress {
     height: 100%;
-    background-color: #00f; /* Color de progreso */
-    width: 0; /* Controla el progreso */
-    transition: width 0.5s ease; /* Transición suave */
+    background-color: #00f;
+    width: 0;
+    transition: width 0.5s ease;
 }
 
 .album-logo {
-    position: absolute; /* Posicionar en la esquina izquierda */
-    top: -25px; /* Ajustar posición */
-    left: 10px; /* Ajustar posición */
-    width: 50px; /* Tamaño del logo */
-    height: 50px; /* Tamaño del logo */
+    position: absolute;
+    top: -25px;
+    left: 10px;
+    width: 50px;
+    height: 50px;
 }
 
 .album-logo img {
-    width: 100%; /* Ajustar el tamaño de la imagen al contenedor */
-    height: auto; /* Mantener proporciones */
-    border-radius: 50%; /* Redondear imagen */
-    animation: spin 2s linear infinite; /* Girar continuamente */
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    animation: spin 2s linear infinite;
 }
 
 .controls-section {
     text-align: center;
-    background-color: rgba(255, 255, 255, 0.1); /* Fondo semitransparente */
-    border-radius: 10px; /* Bordes redondeados */
-    padding: 15px; /* Espaciado interno */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5); /* Sombra */
-    width: 80%; /* Ancho del contenedor de controles */
-    margin: 0 auto; /* Centrar controles */
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 5px; /* Reducido aún más el padding */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    width: 50%; /* Más estrecha */
+    margin: 0 auto;
 }
 
 .controls {
     display: flex;
     justify-content: center;
-    gap: 10px; /* Espacio entre botones */
+    gap: 20px; /* Más espacio entre los botones */
 }
 
 .control-button {
-    background-color: transparent; /* Sin fondo */
-    border: none; /* Sin borde */
-    width: 50px; /* Tamaño del botón */
-    height: 50px; /* Tamaño del botón */
-    cursor: pointer; /* Cursor de puntero */
-    transition: transform 0.3s; /* Añade un efecto al pasar el cursor */
-}
-
-.control-button img {
-    width: 100%; /* Ajustar la imagen al tamaño del botón */
-    height: auto; /* Mantener la proporción */
-}
-
-.control-button:hover {
-    transform: scale(1.1); /* Efecto al pasar el cursor */
+    background-color: transparent;
+    border: none;
+    width: 45px; /* Botones más pequeños */
+    height: 45px; /* Ajustado a un tamaño más pequeño */
+    cursor: pointer;
 }
 
 .volume-control {
-    position: relative;
+    display: flex;
+    align-items: center;
 }
 
 .volume-slider {
-    display: none;
+    width: 80px;
+    margin-left: 5px;
 }
 
-.volume-control:hover .volume-slider {
-    display: block;
-    position: absolute;
-    left: 0;
-    top: 25px;
-    width: 100px; /* Ajusta el ancho de la barra de volumen */
-}
-
+/* Animación de rotación del CD */
 @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-}
-
-/* Eliminados los estilos de botón predeterminados */
-button {
-    display: none; /* Ocultar botones de texto, ya que usaremos imágenes */
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 
