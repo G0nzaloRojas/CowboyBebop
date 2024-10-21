@@ -466,7 +466,7 @@ main.analisis{
 }
 
 .contact-wrapper{
-    box-shadow: 0  0 20px 0 rgba(241, 0, 0, 0.3);
+    box-shadow: 0  0 20px 0 rgba(234, 3, 255, 0.3);
     display: grid;
     grid-template-columns: 2fr 1fr;
 }
@@ -513,7 +513,7 @@ main.analisis{
 }
 
 .contact-form form button:hover, .contact-form form button:focus {
-    background: #af30d6;
+    background: #db590d;
     color: #f0f0f0;
     transition: background-color 1s ease-out;
     outline: 0;
