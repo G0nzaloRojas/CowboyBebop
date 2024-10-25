@@ -6,6 +6,7 @@
 
 /* General */
 body {
+    height: 100%;
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f0f0f0; /* Fondo */
@@ -130,13 +131,41 @@ nav ul li ul li {
     border-radius: 10px; /* Esquinas redondeadas */
 }
 
-/* Footer */
+.container-footer {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Altura mínima para ocupar toda la pantalla */
+}
+
 footer {
     display: flex;
     justify-content: center; /* Centra todos los elementos del footer */
     align-items: center;
     height: 150px;
-    background-color: #f1f1f1;
+    background: radial-gradient(circle at bottom, #000 0%, #111 100%); /* Fondo oscuro para simular el espacio */
+    position: relative; /* Cambiado a relativo */
+    overflow: hidden; /* Oculta cualquier contenido que desborde */
+    border-radius: 50% 50% 0 0; /* Forma redondeada en la parte superior */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Sombra para simular luz de estrellas */
+    margin-top: auto; /* Empuja el footer hacia abajo */
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 200%;
+    background: url('../Images/stars.gif') repeat; /* Ruta correcta al GIF de estrellas */
+    opacity: 0.5; /* Ajusta la opacidad según sea necesario */
+    animation: twinkle 3s infinite alternate; /* Animación de parpadeo */
+    z-index: 0; /* Coloca detrás del contenido */
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.3; }
+    100% { opacity: 0.7; }
 }
 
 footer a {
@@ -146,11 +175,12 @@ footer a {
     align-items: center; /* Centra el contenido verticalmente */
     width: 60px; /* Aumenta el tamaño según necesites */
     height: 60px; /* Aumenta el tamaño según necesites */
-    border-radius: 50%;
+    border-radius: 50%; /* Iconos en círculos */
     background-color: white; /* Fondo blanco para el efecto */
     box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5); /* Sombra para el efecto */
     transition: transform 0.5s, background-color 0.5s; /* Transición suave */
     margin: 0 10px; /* Espaciado horizontal entre iconos */
+    z-index: 1; /* Asegura que los iconos estén por encima del fondo */
 }
 
 footer img {
@@ -183,6 +213,7 @@ footer a:nth-child(4):hover {
 footer a:nth-child(5):hover {
     background-color: #1DA1F2; /* Twitter */
 }
+
 
 /* Media Queries */
 @media (max-width: 768px) {
