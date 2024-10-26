@@ -601,6 +601,7 @@ main.analisis{
 
 .contact-info{
     background: #000;
+    text-align: center;
 }
 
 .contact-info h3 , .contact-info ul , .contact-info p{
@@ -617,3 +618,8 @@ main.analisis{
     padding: .3em;
 }
 
+.gif-saludo{
+    width: 300px;
+    height: auto;
+    margin-bottom: 10px;
+}
