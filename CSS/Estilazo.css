@@ -351,6 +351,51 @@ main.analisis{
     color: #fff;
 }
 
+/*personajes.html*/
+.personajes {
+    display: flex;
+    flex-direction: column; /* Apila los personajes uno debajo del otro */
+}
+
+.jet-content, .faye-content, .ed-content {
+    display: flex; /* Usar flexbox para alinear elementos */
+    align-items: center; /* Alinear verticalmente al centro */
+    background-color: #fff; /* Color de fondo */
+    padding: 20px; /* Espaciado interno */
+    border-radius: 0.5rem; /* Bordes redondeados */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra */
+    margin: 20px; /* Margen alrededor del cuadro */
+}
+
+.jet-image, .faye-image, .ed-image {
+    max-width: 380px; /* Ajusta el tamaño de los GIFs */
+    height: auto; /* Mantiene la proporción de las imágenes */
+    margin-right: 15px; /* Espacio entre imagen y descripción */
+}
+
+.faye-content {
+    flex-direction: row; /* Mantiene la dirección normal para Faye */
+}
+
+.faye-content .faye-image {
+    margin-left: 15px; /* Espacio entre el texto y la imagen */
+}
+
+.jet-description, .faye-description, .ed-description {
+    flex-grow: 1; /* Hacer que ocupe el espacio restante */
+}
+
+.personaje h2, .faye-content h3, .personaje h4 {
+    margin: 0 0 10px; /* Espaciado entre el título y el párrafo */
+}
+
+.personaje p, .faye-content p {
+    margin: 0; /* Sin margen para los párrafos */
+}
+
+
+
+
 /*.card-content .btn{
     display: inline-block;
     padding: 8px 16px;
