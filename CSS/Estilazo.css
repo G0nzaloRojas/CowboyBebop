@@ -642,17 +642,17 @@ main.analisis {
 
 .card_flip-container {
     display: flex;
-    flex-wrap: wrap; /* Permite que las tarjetas se ajusten a múltiples líneas */
-    justify-content: center; /* Centra las tarjetas en el contenedor */
-    margin: 20px; /* Espaciado alrededor del contenedor */
+    flex-wrap: wrap; 
+    justify-content: center; 
+    margin: 20px; 
 }
 
 .card-flip {
     position: relative;
     width: 300px;
     height: 350px;
-    margin: 20px; /* Espacio entre las tarjetas */
-    perspective: 1000px; /* Añade profundidad al efecto 3D */
+    margin: 20px; 
+    perspective: 1000px; 
 }
 
 .card-flip .face {
@@ -707,7 +707,7 @@ main.analisis {
 
 .card-flip .back .link a {
     color: #f1c40f;
-    text-decoration: none; /* Sin subrayado */
+    text-decoration: none; 
 }
 
 .card-flip .back h3 {
