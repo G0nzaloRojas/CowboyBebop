@@ -133,6 +133,12 @@ nav ul li ul li {
     border-radius: 10px; /* Esquinas redondeadas */
 }
 
+#trailer{
+    display: block;
+    margin: 0 auto 40px;
+    max-width: 100%;
+}
+
 .container-footer {
     display: flex;
     flex-direction: column;
