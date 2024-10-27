@@ -4,7 +4,6 @@
     box-sizing: border-box;
 }
 
-/* General */
 body {
     display: flex;
     flex-direction: column;
@@ -17,7 +16,7 @@ body {
 }
 
 .icon {
-    display: none; /* Ocultado por defecto */
+    display: none; 
     color: white;
     font-size: 24px;
     cursor: pointer;
@@ -26,31 +25,29 @@ body {
     top: 20px;    
 }
 
-/* Encabezado */
 header {
-    background-color: #705b5bc2; /* Fondo del encabezado */
-    color: white; /* Color de texto */
-    padding: 2%  0;  /* Espaciado horizontal más equilibrado */
+    background-color: #705b5bc2; 
+    color: white; 
+    padding: 2%  0;  
     display: flex;
-    align-items: center; /* Asegura que los elementos estén alineados verticalmente */
+    align-items: center; 
     justify-content: space-between;
 }
 
 
 header img {
-    max-height: 60px; /* Altura máxima del logo */
+    max-height: 60px; 
     margin-right: 20px;
 }
 
-/* Menú */
 nav ul {
-    display: flex; /* Mostrar en fila */
+    display: flex; 
     justify-content: flex-end;
     padding-left: 10px;
 }
 
 nav ul li {
-    margin: 0 10px; /* Espaciado entre elementos */
+    margin: 0 10px; 
     display: inline-block;
     white-space: nowrap;
 }
@@ -59,7 +56,7 @@ nav ul li a {
     font-size: 1.2rem;
     text-transform: uppercase;
     padding-right: 2%;
-    color: whitesmoke; /* Color de los enlaces */
+    color: whitesmoke; 
     text-decoration: none;
 }
 
@@ -68,7 +65,6 @@ nav ul li a:hover {
     font-weight: 800;
 }
 
-/* Submenú */
 nav ul li ul {
     display: none;
     position: absolute;
@@ -77,7 +73,7 @@ nav ul li ul {
 }
 
 nav ul li:hover ul {
-    display: block; /* Muestra el submenú al hacer hover */
+    display: block; 
 }
 
 nav ul li ul li {
@@ -85,34 +81,32 @@ nav ul li ul li {
     margin: 10px 0;
 }
 
-/* Imagen principal */
 #Img {
     display: flex;
-    justify-content: center; /* Centrar horizontalmente */
-    align-items: center; /* Centrar verticalmente */
+    justify-content: center; 
+    align-items: center; 
     margin: 20px 0;
 }
 
 #Img img {
-    width: 80%; /* Ajustar ancho */
-    height: auto; /* Mantener proporciones */
-    max-width: 1000px; /* Limitar ancho máximo */
-    border-radius: 10px; /* Esquinas redondeadas */
+    width: 80%; 
+    height: auto; 
+    max-width: 1000px; 
+    border-radius: 10px; 
 }
 
-/* Artículo */
 .article {
-    display: flex; /* Usar Flexbox */
+    display: flex; 
     max-width: 800px;
-    margin: 20px auto; /* Centrar el artículo */
+    margin: 20px auto; 
     padding: 20px;
-    background-color: white; /* Fondo */
+    background-color: white;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
 
 .article > div {
-    flex: 1; /* Flex para ocupar espacio igual */
+    flex: 1; 
     margin: 10px;
 }
 
@@ -123,14 +117,13 @@ nav ul li ul li {
 }
 
 #texto_article {
-    line-height: 1.6; /* Mejorar legibilidad */
+    line-height: 1.6; 
 }
 
-/* Imagen dentro del artículo */
 #Img_Principal {
     width: 100%;
-    height: auto; /* Mantener proporciones */
-    border-radius: 10px; /* Esquinas redondeadas */
+    height: auto; 
+    border-radius: 10px; 
 }
 
 #trailer{
@@ -147,9 +140,9 @@ nav ul li ul li {
 
 footer {
     display: flex;
-    flex-direction: column; /* Cambiar a columna para el texto */
-    align-items: center; /* Centra todos los elementos horizontalmente */
-    justify-content: center; /* Centra verticalmente el contenido */
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center; 
     height: 150px;
     background: radial-gradient(circle at bottom, #000 0%, #111 100%);
     position: relative;
@@ -160,13 +153,13 @@ footer {
 }
 
 footer .social-links {
-    display: flex; /* Mantiene los enlaces en fila */
-    justify-content: center; /* Centra los enlaces horizontalmente */
-    margin-bottom: 10px; /* Espacio entre los iconos y el texto */
+    display: flex; 
+    justify-content: center; 
+    margin-bottom: 10px;
 }
 
 footer p {
-    text-align: center; /* Centra el texto del párrafo */
+    text-align: center; 
     color: white;
 }
 
@@ -199,7 +192,7 @@ footer a {
     background-color: white;
     box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
     transition: transform 0.5s, background-color 0.5s;
-    margin: 0 10px; /* Espaciado horizontal entre iconos */
+    margin: 0 10px; 
     z-index: 1;
 }
 
@@ -210,10 +203,9 @@ footer img {
 }
 
 footer a:hover {
-    transform: translate(0, -10px); /* Levanta el icono al hacer hover */
+    transform: translate(0, -10px); 
 }
 
-/* Colores específicos para cada red social */
 footer a:nth-child(1):hover {
     background-color: #00A8E1; /* Amazon Prime Video */
 }
@@ -292,8 +284,6 @@ main.analisis {
     width: 100%;
 }
 
-
-/* Encabezado */
 .Encabezado {
     background-color: #333;
     color: white;
@@ -301,24 +291,25 @@ main.analisis {
     text-align: center;
 }
 
+/*SPIKE*/
 .spike-container {
-    display: flex; /* Usar flexbox para alinear elementos */
-    align-items: center; /* Alinear verticalmente al centro */
-    background-color: #fff; /* Color de fondo */
-    padding: 20px; /* Espaciado interno */
-    border-radius: 0.5rem; /* Bordes redondeados */
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra */
-    margin: 20px; /* Margen alrededor del cuadro */
+    display: flex; 
+    align-items: center; 
+    background-color: #fff; 
+    padding: 20px;
+    border-radius: 0.5rem; 
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); 
+    margin: 20px; 
 }
 
 .spike-image {
-    max-width: 450px; /* Ajustar el tamaño según sea necesario */
-    margin-right: 30px; /* Espacio entre imagen y descripción */
+    max-width: 450px; 
+    margin-right: 30px; 
     height: auto;
 }
 
 .spike-description {
-    flex-grow: 1; /* Hacer que ocupe el espacio restante */
+    flex-grow: 1; 
 }
 
 .card-container {
@@ -326,7 +317,7 @@ main.analisis {
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 100px;
-    gap: 20px; /* Espacio entre las cartas */
+    gap: 20px;
 }
 
 .card {
@@ -341,7 +332,7 @@ main.analisis {
 
 .card:hover {
     box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
-    transform: translateY(-2%); /* Ajuste más sutil */
+    transform: translateY(-2%); 
 }
 
 .card img {
@@ -381,46 +372,46 @@ main.analisis {
     color: #fff;
 }
 
-/*personajes.html*/
+/*PERSONAJES*/
 .personajes {
     display: flex;
-    flex-direction: column; /* Apila los personajes uno debajo del otro */
+    flex-direction: column; 
 }
 
 .jet-content, .faye-content, .ed-content {
-    display: flex; /* Usar flexbox para alinear elementos */
-    align-items: center; /* Alinear verticalmente al centro */
-    background-color: #fff; /* Color de fondo */
-    padding: 20px; /* Espaciado interno */
-    border-radius: 0.5rem; /* Bordes redondeados */
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra */
-    margin: 20px; /* Margen alrededor del cuadro */
+    display: flex; 
+    align-items: center; 
+    background-color: #fff; 
+    padding: 20px; 
+    border-radius: 0.5rem; 
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); 
+    margin: 20px; 
 }
 
 .jet-image, .faye-image, .ed-image {
-    max-width: 380px; /* Ajusta el tamaño de los GIFs */
-    height: auto; /* Mantiene la proporción de las imágenes */
-    margin-right: 15px; /* Espacio entre imagen y descripción */
+    max-width: 380px; 
+    height: auto; 
+    margin-right: 15px; 
 }
 
 .faye-content {
-    flex-direction: row; /* Mantiene la dirección normal para Faye */
+    flex-direction: row; 
 }
 
 .faye-content .faye-image {
-    margin-left: 15px; /* Espacio entre el texto y la imagen */
+    margin-left: 15px; 
 }
 
 .jet-description, .faye-description, .ed-description {
-    flex-grow: 1; /* Hacer que ocupe el espacio restante */
+    flex-grow: 1; 
 }
 
 .personaje h2, .faye-content h3, .personaje h4 {
-    margin: 0 0 10px; /* Espaciado entre el título y el párrafo */
+    margin: 0 0 10px; 
 }
 
 .personaje p, .faye-content p {
-    margin: 0; /* Sin margen para los párrafos */
+    margin: 0; 
 }
 
 /*.card-content .btn{
@@ -433,7 +424,7 @@ main.analisis {
     color: #fff;
 }*/
 
-/*Reproductor*/
+/*REPRODUCTOR*/
 .player-page {
     display: flex;
     flex-direction: column;
@@ -468,26 +459,26 @@ main.analisis {
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     object-fit: cover;
-    position: absolute; /* Cambiado a absolute para superponer */
-    top: 0; /* Alinea al top */
-    left: 0; /* Alinea a la izquierda */
-    z-index: 2; /* Asegúrate de que la portada esté encima del CD */
+    position: absolute; 
+    top: 0; 
+    left: 0; 
+    z-index: 2; 
 }
 
 .cd-disc {
     position: absolute;
     top: 50%;
-    right: -60px; /* Ajustado para asomar más */
+    right: -60px; 
     width: 350px;
     height: 350px;
     transform: translate(0, -50%);
     transition: opacity 0.5s ease;
     opacity: 1;
-    z-index: 1; /* Asegúrate de que el CD esté detrás */
+    z-index: 1; 
 }
 
 .paused .cd-disc {
-    opacity: 0; /* Oculto cuando está en pausa */
+    opacity: 0; 
 }
 
 .tracklist-section {
@@ -598,7 +589,7 @@ main.analisis {
     }
 }
 
-/*Influencia*/
+/*INFLUENCIA*/
 .influencia-section {
     display: flex;
     flex-direction: column;
@@ -616,41 +607,41 @@ main.analisis {
 }
 
 .influencia-container {
-    display: flex; /* Usar flexbox para alinear elementos */
-    align-items: flex-start; /* Alinear verticalmente al inicio */
+    display: flex; 
+    align-items: flex-start; 
 }
 
 .influencia-image {
-    max-width: 350px; /* Ajustar el tamaño según sea necesario */
-    margin-right: 20px; /* Espacio entre imagen y texto */
+    max-width: 350px; 
+    margin-right: 20px; 
     height: auto;
 }
 
 .influencia-description {
-    flex-grow: 1; /* Hacer que ocupe el espacio restante */
+    flex-grow: 1; 
 }
 
 #title-influencia {
-    margin: 0; /* Sin márgenes para el título */
-    margin-bottom: 10px; /* Espacio entre el título y el texto */
+    margin: 0; 
+    margin-bottom: 10px; 
 }
 
 .genero-article {
-    background-color: #1A1A2E; /* Color de fondo */
-    color: #f1c40f; /* Color del texto */
+    background-color: #1A1A2E; 
+    color: #f1c40f; 
     padding: 20px;
-    border-radius: 10px; /* Bordes redondeados */
-    margin: 20px; /* Margen alrededor del cuadro */
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra */
+    border-radius: 10px; 
+    margin: 20px; 
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); 
 }
 
 .genero-article h2 {
-    margin: 0; /* Sin márgenes para el título */
-    margin-bottom: 10px; /* Espacio entre el título y el texto */
+    margin: 0; 
+    margin-bottom: 10px; 
 }
 
 
-/*contacto.html*/
+/*CONTACTO*/
 .contenido{
     max-width: 1170px;
     margin-left: auto;
