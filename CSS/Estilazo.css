@@ -136,20 +136,32 @@ nav ul li ul li {
 .container-footer {
     display: flex;
     flex-direction: column;
-   flex-grow: 1;
+    flex-grow: 1;
 }
 
 footer {
     display: flex;
-    justify-content: center; /* Centra todos los elementos del footer */
-    align-items: center;
+    flex-direction: column; /* Cambiar a columna para el texto */
+    align-items: center; /* Centra todos los elementos horizontalmente */
+    justify-content: center; /* Centra verticalmente el contenido */
     height: 150px;
-    background: radial-gradient(circle at bottom, #000 0%, #111 100%); /* Fondo oscuro para simular el espacio */
-    position: relative; /* Cambiado a relativo */
-    overflow: hidden; /* Oculta cualquier contenido que desborde */
-    border-radius: 50% 50% 0 0; /* Forma redondeada en la parte superior */
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5); /* Sombra para simular luz de estrellas */
-    margin-top: auto; /* Empuja el footer hacia abajo */
+    background: radial-gradient(circle at bottom, #000 0%, #111 100%);
+    position: relative;
+    overflow: hidden;
+    border-radius: 50% 50% 0 0;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    margin-top: auto;
+}
+
+footer .social-links {
+    display: flex; /* Mantiene los enlaces en fila */
+    justify-content: center; /* Centra los enlaces horizontalmente */
+    margin-bottom: 10px; /* Espacio entre los iconos y el texto */
+}
+
+footer p {
+    text-align: center; /* Centra el texto del párrafo */
+    color: white;
 }
 
 footer::before {
@@ -159,10 +171,10 @@ footer::before {
     left: 0;
     width: 200%;
     height: 200%;
-    background: url('../Images/stars.gif') repeat; /* Ruta correcta al GIF de estrellas */
-    opacity: 0.5; /* Ajusta la opacidad según sea necesario */
-    animation: twinkle 3s infinite alternate; /* Animación de parpadeo */
-    z-index: 0; /* Coloca detrás del contenido */
+    background: url('../Images/stars.gif') repeat;
+    opacity: 0.5;
+    animation: twinkle 3s infinite alternate;
+    z-index: 0;
 }
 
 @keyframes twinkle {
@@ -171,23 +183,23 @@ footer::before {
 }
 
 footer a {
-    position: relative; /* Necesario para los efectos de transform */
-    display: flex; /* Cambia a flex para centrar el icono */
-    justify-content: center; /* Centra el contenido horizontalmente */
-    align-items: center; /* Centra el contenido verticalmente */
-    width: 60px; /* Aumenta el tamaño según necesites */
-    height: 60px; /* Aumenta el tamaño según necesites */
-    border-radius: 50%; /* Iconos en círculos */
-    background-color: white; /* Fondo blanco para el efecto */
-    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5); /* Sombra para el efecto */
-    transition: transform 0.5s, background-color 0.5s; /* Transición suave */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.5);
+    transition: transform 0.5s, background-color 0.5s;
     margin: 0 10px; /* Espaciado horizontal entre iconos */
-    z-index: 1; /* Asegura que los iconos estén por encima del fondo */
+    z-index: 1;
 }
 
 footer img {
-    width: 30px; /* Aumenta el tamaño del icono para que encaje mejor */
-    height: 30px; /* Asegúrate de que la altura sea la misma */
+    width: 30px;
+    height: 30px;
     transition: filter 0.3s ease;
 }
 
@@ -215,6 +227,7 @@ footer a:nth-child(4):hover {
 footer a:nth-child(5):hover {
     background-color: #1DA1F2; /* Twitter */
 }
+
 
 
 /* Media Queries */
