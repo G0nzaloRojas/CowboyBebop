@@ -599,31 +599,56 @@ main.analisis {
 }
 
 /*Influencia*/
-.influencia-section{
+.influencia-section {
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 20px;
 }
 
-.influencia-article, .genero-article{
+.influencia-article {
     background-color: #1A1A2E;
     color: #f1c40f;
     padding: 20px;
     border-radius: 10px;
-    display: flex;
-    gap: 20px;
+    margin: 20px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 
-.influencia-article img{
-    width: 300px;
+.influencia-container {
+    display: flex; /* Usar flexbox para alinear elementos */
+    align-items: flex-start; /* Alinear verticalmente al inicio */
+}
+
+.influencia-image {
+    max-width: 350px; /* Ajustar el tamaño según sea necesario */
+    margin-right: 20px; /* Espacio entre imagen y texto */
     height: auto;
-    flex-shrink: 0;
 }
 
-#title-influencia, #title-genero{
-    margin: 0;
+.influencia-description {
+    flex-grow: 1; /* Hacer que ocupe el espacio restante */
 }
+
+#title-influencia {
+    margin: 0; /* Sin márgenes para el título */
+    margin-bottom: 10px; /* Espacio entre el título y el texto */
+}
+
+.genero-article {
+    background-color: #1A1A2E; /* Color de fondo */
+    color: #f1c40f; /* Color del texto */
+    padding: 20px;
+    border-radius: 10px; /* Bordes redondeados */
+    margin: 20px; /* Margen alrededor del cuadro */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+.genero-article h2 {
+    margin: 0; /* Sin márgenes para el título */
+    margin-bottom: 10px; /* Espacio entre el título y el texto */
+}
+
 
 /*contacto.html*/
 .contenido{
