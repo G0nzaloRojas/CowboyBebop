@@ -423,9 +423,6 @@ main.analisis {
     margin: 0; /* Sin margen para los párrafos */
 }
 
-
-
-
 /*.card-content .btn{
     display: inline-block;
     padding: 8px 16px;
@@ -436,6 +433,7 @@ main.analisis {
     color: #fff;
 }*/
 
+/*Reproductor*/
 .player-page {
     display: flex;
     flex-direction: column;
@@ -492,7 +490,6 @@ main.analisis {
     opacity: 0; /* Oculto cuando está en pausa */
 }
 
-/* Resto del CSS permanece igual */
 .tracklist-section {
     margin-top: 20px;
     flex: 2;
@@ -601,9 +598,34 @@ main.analisis {
     }
 }
 
+/*Influencia*/
+.influencia-section{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+}
+
+.influencia-article, .genero-article{
+    background-color: #1A1A2E;
+    color: #f1c40f;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+}
+
+.influencia-article img{
+    width: 300px;
+    height: auto;
+    flex-shrink: 0;
+}
+
+#title-influencia, #title-genero{
+    margin: 0;
+}
 
 /*contacto.html*/
-
 .contenido{
     max-width: 1170px;
     margin-left: auto;
