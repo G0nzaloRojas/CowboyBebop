@@ -640,6 +640,94 @@ main.analisis {
     margin-bottom: 10px; 
 }
 
+.card_flip-container {
+    display: flex;
+    flex-wrap: wrap; /* Permite que las tarjetas se ajusten a múltiples líneas */
+    justify-content: center; /* Centra las tarjetas en el contenedor */
+    margin: 20px; /* Espaciado alrededor del contenedor */
+}
+
+.card-flip {
+    position: relative;
+    width: 300px;
+    height: 350px;
+    margin: 20px; /* Espacio entre las tarjetas */
+    perspective: 1000px; /* Añade profundidad al efecto 3D */
+}
+
+.card-flip .face {
+    position: absolute;
+    width: 100%;
+    height: 100%;   
+    backface-visibility: hidden;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.5s;
+}
+
+.card-flip .front {
+    transform: rotateY(0deg);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card-flip .front img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-flip .front h3 {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    line-height: 45px;
+    color: whitesmoke;
+    background: rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+.card-flip .back {
+    transform: rotateY(180deg);
+    background: rgba(3, 35, 54);
+    padding: 15px;
+    color: #f1c40f;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.card-flip .back .link {
+    border-top: solid 1px #f3f3f3;
+    height: 50px;
+    line-height: 50px;
+}
+
+.card-flip .back .link a {
+    color: #f1c40f;
+    text-decoration: none; /* Sin subrayado */
+}
+
+.card-flip .back h3 {
+    font-size: 25px;
+    margin-top: 20px;
+    letter-spacing: 2px;
+}
+
+.card-flip .back p {
+    letter-spacing: 1px;
+}
+
+.card-flip:hover .front {
+    transform: rotateY(180deg);
+}
+
+.card-flip:hover .back {
+    transform: rotateY(360deg);
+}
+
 
 /*CONTACTO*/
 .contenido{
