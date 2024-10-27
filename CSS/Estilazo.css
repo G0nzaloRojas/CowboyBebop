@@ -267,20 +267,31 @@ footer a:nth-child(5):hover {
     }
 }
 
-main.analisis{
-    display: flex;
-    justify-content: space-around; 
+main.analisis {
     margin-top: 2em;
 }
 
-.texto_analisis, .video{
-    width: 45%;
+.contenido-analisis {
+    display: flex;
+    justify-content: space-between; 
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.video iframe{
-    width: 100%;
-    height: auto;
+.texto_analisis {
+    width: 55%;
 }
+
+.video-trailer {
+    width: 40%;
+}
+
+.video-trailer iframe {
+    width: 100%;
+}
+
 
 /* Encabezado */
 .Encabezado {
