@@ -408,12 +408,13 @@ main.analisis {
 /*PERSONAJES*/
 .titulo-principal {
     text-align: center; 
-    color: #1e0d6d; 
+    color: #db590d; 
 }
 
 .personajes {
     display: flex;
     flex-direction: column; 
+    margin-bottom: 50px; /* Aumentar el margen inferior aquí */
 }
 
 .jet-content, .faye-content, .ed-content {
@@ -456,7 +457,6 @@ main.analisis {
     color: #f1c40f; 
     font-size: 17px;
 }
-
 
 /*.card-content .btn{
     display: inline-block;
@@ -584,7 +584,7 @@ main.analisis {
     border: none;
     cursor: pointer;
     font-size: 24px;
-    margin: 0 10px; /* Espacio entre los botones */
+    margin: 0 10px; 
 }
 
 .volume-control {
@@ -753,44 +753,42 @@ main.analisis {
 #h1Galeria {
     text-align: center;
     margin: 20px 0;
-    color: #333; /* Color del título */
-    font-size: 2.5em; /* Tamaño del título */
+    color: #333; 
+    font-size: 2.5em; 
 }
 
 .articuloGaleria {
-    display: flex; /* Usar flexbox para alinear las imágenes en fila */
-    flex-wrap: wrap; /* Permite que las imágenes se ajusten a la siguiente fila */
-    justify-content: center; /* Centra las imágenes en la fila */
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
     margin-bottom: 20px;
     border-radius: 25px;
 }
 
 .articuloGaleria div {
-    display: flex; /* Usar flexbox para alinear imágenes */
-    justify-content: space-between; /* Espacio entre imágenes en una fila */
-    margin: 10px; /* Espacio entre filas */
+    display: flex; 
+    justify-content: space-between; 
+    margin: 10px; 
 }
 
 .articuloGaleria div a {
-    margin: 5px; /* Espacio entre imágenes */
+    margin: 5px; 
 }
 
 .articuloGaleria div img {
-    width: 300px; /* Ancho fijo de 300px */
-    height: 300px; /* Altura fija de 300px */
-    border-radius: 8px; /* Bordes redondeados */
-    background-color: lightskyblue; /* Color de fondo */
-    padding: 5px; /* Espacio interno */
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
-    transition: transform 0.3s, box-shadow 0.3s; /* Transición suave para el efecto */
+    width: 300px; 
+    height: 300px; 
+    border-radius: 8px; 
+    background-color: lightskyblue; 
+    padding: 5px; 
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    transition: transform 0.3s, box-shadow 0.3s; 
 }
 
 .articuloGaleria div img:hover {
-    transform: scale(1.05); /* Aumentar el tamaño de la imagen al pasar el mouse */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra más intensa */
+    transform: scale(1.05); 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); 
 }
-
-
 
 
 /*CONTACTO*/
