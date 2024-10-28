@@ -336,7 +336,7 @@ main.analisis {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 100px;
+    margin-top: 50px; /* Reducido el espacio entre el título y las cartas */
     gap: 20px;
 }
 
@@ -366,7 +366,7 @@ main.analisis {
 }
 
 .card .card-content p {
-    color: #666;
+    color: #162291;
     font-size: 15px;
     line-height: 1.5;
 }
@@ -374,6 +374,7 @@ main.analisis {
 .card .card-content h3 {
     font-size: 28px;
     margin-bottom: 15px;
+    color: #db590d;
 }
 
 .card .card-content a {
@@ -396,11 +397,18 @@ main.analisis {
     display: none;
 }
 
+.section-title {
+    text-align: center;
+    color: #db590d; 
+    font-size: 32px; 
+    margin: 20px 0; 
+}
+
 
 /*PERSONAJES*/
 .titulo-principal {
-    text-align: center; /* Centrar el título principal */
-    color: #1e0d6d; /* Color del título principal */
+    text-align: center; 
+    color: #1e0d6d; 
 }
 
 .personajes {
@@ -411,7 +419,7 @@ main.analisis {
 .jet-content, .faye-content, .ed-content {
     display: flex; 
     align-items: center; 
-    background-color: #1A1A2E; /* Color de fondo de los cuadros */
+    background-color: #1A1A2E; 
     padding: 20px; 
     border-radius: 0.5rem; 
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); 
@@ -437,8 +445,8 @@ main.analisis {
 }
 
 .jet-description h2, .faye-description h3, .ed-description h4 {
-    text-align: center; /* Centrar títulos de personajes */
-    color: #f1c40f; /* Color de los títulos de personajes */
+    text-align: center;
+    color: #f1c40f; 
     margin: 0 0 10px; 
     font-size: 40px;
 }
@@ -467,7 +475,7 @@ main.analisis {
     margin: 50px;
     border-radius: 15px;
     overflow: hidden;
-    background-color: #c4e7e188; /* Fondo claro */
+    background-color: #c4e7e188; 
 }
 
 .content {
@@ -478,17 +486,17 @@ main.analisis {
 }
 
 .album-section {
-    flex: 0 0 400px; /* Ancho fijo para la sección del álbum */
-    margin-right: 20px; /* Margen derecho para separar de la lista de canciones */
-    display: flex; /* Añadido para centrar el contenido */
-    justify-content: center; /* Centramos el contenido horizontalmente */
-    margin-left: 30px; /* Añadir margen izquierdo para mover el álbum a la derecha */
+    flex: 0 0 400px; 
+    margin-right: 20px; 
+    display: flex; 
+    justify-content: center; 
+    margin-left: 30px; 
 }
 
 .album-cover-wrapper {
     position: relative;
-    width: 100%; /* Usar el 100% del ancho del contenedor */
-    height: 400px; /* Mantener la altura */
+    width: 100%; 
+    height: 400px; 
 }
 
 .album-cover {
@@ -501,26 +509,26 @@ main.analisis {
 
 .cd-disc {
     position: absolute;
-    top: 50%; /* Centrar verticalmente */
-    right: -60px; /* Ajusta según sea necesario para la posición */
-    width: 350px; /* Ajusta el tamaño del CD según necesites */
-    height: 350px; /* Mantener proporción */
-    transform: translate(0, -50%); /* Centrar el CD verticalmente */
+    top: 50%; 
+    right: -60px; 
+    width: 350px; 
+    height: 350px; 
+    transform: translate(0, -50%); 
     transition: opacity 0.5s ease;
     opacity: 1;
-    z-index: -1; /* Asegúrate de que esté por encima de la portada */
+    z-index: -1; 
 }
 
 .paused .cd-disc {
-    opacity: 0; /* Hacer invisible cuando esté pausado */
+    opacity: 0; 
 }
 
 .tracklist-section {
-    flex: 1; /* Tomar el espacio restante */
-    text-align: center; /* Centrar el texto */
+    flex: 1;
+    text-align: center; 
     color: #1e0ff1;
-    padding: 10px; /* Relleno para evitar que el texto esté pegado */
-    margin-top: 20px; /* Margen superior para separar del álbum */
+    padding: 10px; 
+    margin-top: 20px; 
 }
 
 .track-list {
@@ -533,16 +541,16 @@ main.analisis {
     padding: 5px;
     cursor: pointer;
     transition: color 0.3s ease;
-    color: #f10f6d; /* Color del texto */
+    color: #f10f6d; 
 }
 
 .track-list li:hover {
     color: #007BFF; 
 }
 
-.track-list li.active { /* Clase para la canción en reproducción */
+.track-list li.active { 
     color: #FF6347; 
-    font-weight: bold; /* Negrita para mayor énfasis */
+    font-weight: bold; 
 }
 
 .controls-section {
