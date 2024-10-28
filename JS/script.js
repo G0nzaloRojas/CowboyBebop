@@ -6,9 +6,10 @@ const nextBtn = document.getElementById('nextBtn');
 const volumeSlider = document.querySelector('.volume-slider');
 const playIcon = document.getElementById('playIcon');
 const pauseIcon = document.getElementById('pauseIcon');
-const albumLogo = document.querySelector('.album-logo img'); // Asegúrate de seleccionar la imagen
+const volumeBtn = document.getElementById('volumeBtn'); // Botón de volumen
 
 let currentTrackIndex = 0;
+let isMuted = false;
 
 // Cargar la pista inicial
 loadTrack(currentTrackIndex);
@@ -37,12 +38,12 @@ function togglePlayPause() {
         audioPlayer.play();
         playIcon.style.display = 'none';
         pauseIcon.style.display = 'inline';
-        albumLogo.classList.add('rotate'); 
+        document.querySelector('.player-page').classList.add('playing'); // Agregar clase para el reproductor
     } else {
         audioPlayer.pause();
         playIcon.style.display = 'inline';
         pauseIcon.style.display = 'none';
-        albumLogo.classList.remove('rotate'); 
+        document.querySelector('.player-page').classList.remove('playing'); // Remover clase para el reproductor
     }
 }
 
@@ -63,6 +64,15 @@ function nextTrack() {
 // Actualizar el volumen
 volumeSlider.addEventListener('input', () => {
     audioPlayer.volume = volumeSlider.value;
+});
+
+// Muteo y desmuteo
+volumeBtn.addEventListener('click', () => {
+    isMuted = !isMuted;
+    audioPlayer.muted = isMuted; // Mute o desmute
+    volumeBtn.innerHTML = isMuted 
+        ? '<i class="fas fa-volume-mute" aria-hidden="true"></i>' 
+        : '<i class="fas fa-volume-up" aria-hidden="true"></i>'; // Cambiar icono
 });
 
 // Eventos de reproducción
@@ -93,7 +103,7 @@ progressContainer.addEventListener('click', (e) => {
     audioPlayer.currentTime = (clickX / width) * duration;
 });
 
-//Spike.html- parte de las cartas de Vicious y Julia
+// Spike.html - parte de las cartas de Vicious y Julia
 function toggleText(fullId, previewId) {
     const fullText = document.getElementById(fullId);
     const previewText = document.getElementById(previewId);
