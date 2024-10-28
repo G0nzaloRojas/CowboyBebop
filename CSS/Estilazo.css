@@ -33,7 +33,13 @@ header {
     justify-content: space-between;
 }
 
+.Encabezado {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
 
+}
 header img {
     max-height: 60px; 
     margin-right: 20px;
@@ -111,8 +117,9 @@ nav ul li ul li {
 
 #titulo_article {
     text-align: center;
-    font-size: 24px;
+    font-size: 40px;
     margin-bottom: 10px;
+    color: #04045c;
 }
 
 #texto_article {
@@ -259,14 +266,23 @@ footer a:nth-child(5):hover {
     }
 }
 
+/*ANALISIS*/
 main.analisis {
     margin-top: 2em;
+    margin-bottom: 2em; 
+}
+
+#title-reflexion {
+    margin: 0; 
+    margin-bottom: 10px; 
+    font-size: 35px;
+    text-align: center;
 }
 
 .contenido-analisis {
     display: flex;
     justify-content: space-between; 
-    background-color: whitesmoke;
+    background-color: #1A1A2E;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -274,6 +290,7 @@ main.analisis {
 
 .texto_analisis {
     width: 55%;
+    color: #f1c40f;
 }
 
 .video-trailer {
@@ -284,18 +301,12 @@ main.analisis {
     width: 100%;
 }
 
-.Encabezado {
-    background-color: #333;
-    color: white;
-    padding: 15px;
-    text-align: center;
-}
 
 /*SPIKE*/
 .spike-container {
     display: flex; 
     align-items: center; 
-    background-color: #fff; 
+    background-color: #1A1A2E; 
     padding: 20px;
     border-radius: 0.5rem; 
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); 
@@ -310,6 +321,15 @@ main.analisis {
 
 .spike-description {
     flex-grow: 1; 
+    color: #f1c40f;
+}
+
+.spike-description h1 {
+    margin: 0; 
+    margin-bottom: 10px; 
+    margin-top: 25px;
+    font-size: 35px;
+    text-align: center;
 }
 
 .card-container {
@@ -624,6 +644,8 @@ main.analisis {
 #title-influencia {
     margin: 0; 
     margin-bottom: 10px; 
+    font-size: 35px;
+    text-align: center;
 }
 
 .genero-article {
@@ -638,6 +660,16 @@ main.analisis {
 .genero-article h2 {
     margin: 0; 
     margin-bottom: 10px; 
+    font-size: 35px;
+    text-align: center;
+}
+
+#title-sample{
+    margin: 0; 
+    margin-bottom: 10px; 
+    font-size: 35px;
+    text-align: center;
+    color: #04045c;
 }
 
 .card_flip-container {
