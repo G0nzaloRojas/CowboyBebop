@@ -51,7 +51,8 @@
                     <h1>Spike Spiegel</h1>
                     <p>Vaquero espacial, experto en kung-fu, adicto al cigarro y ex miembro de la mafia, es un hombre que, detrás de su carismática fachada, esconde una tristeza real y profunda. Esta melancolía proviene de un pasado marcado por la separación del amor de su vida, Julia.</p>
                     <p>Su vida se convierte en una búsqueda constante, no solo de recompensas en el espacio, sino también de su propia redención y la esperanza de reencontrarse con ella. Spike es un hombre de pocas palabras, pero cada una de ellas lleva un peso significativo, reflejando su lucha interna y sus anhelos.</p>
-                    <p>A lo largo de sus aventuras con la tripulación de la Bebop, enfrenta enemigos peligrosos y desafíos inesperados, mientras lidia con sus propios demonios. Su naturaleza despreocupada y su habilidad para mantener la calma en situaciones críticas lo convierten en un líder natural, aunque a menudo se muestra distante y evasivo.</p>
+                    <p>Su naturaleza despreocupada y su habilidad para mantener la calma en situaciones críticas lo convierten en un líder natural, aunque a menudo se muestra distante y evasivo.</p>
+                    <br>
                     <p>Spike representa el arquetipo del héroe trágico, un personaje que, a pesar de sus defectos, es profundamente humano. Su viaje nos invita a reflexionar sobre el significado del amor, la pérdida y la búsqueda de la identidad en un universo caótico y a menudo solitario.</p>
                 </div>
             </div>  
@@ -65,20 +66,31 @@
             <img src="Images/Personajes/Vicious.gif" alt="Vicious">
             <div class="card-content">
                 <h3>Vicious</h3>
-                <p>Es el pj antagonista...</p>
-                <a href="" class="btn">Leer más</a>
+                <p id="vicious-preview">Es el antagonista principal de la serie, un ex compañero de Spike que ha caído en la oscuridad...</p>
+                <div id="vicious-full" class="hidden">
+                    <p>Con una ambición desmedida y un carácter frío, Vicious es un maestro en el arte del combate y la manipulación. Su conexión con la mafia y su deseo de poder lo convierten en una amenaza constante para Spike y el Bebop. A pesar de su cruel exterior, su relación con Spike revela un profundo conflicto emocional, un recordatorio de cómo el pasado puede atormentar a quienes buscan la redención.</p>
+                </div>
+                <a href="javascript:void(0);" class="btn" onclick="toggleText('vicious-full', 'vicious-preview')">Leer más</a>
             </div>
         </div>
-
+    
         <div class="card">
             <img src="Images/Personajes/Julia.gif" alt="Julia">
             <div class="card-content">
                 <h3>Julia</h3>
-                <p>La ex de Spike...</p>
-                <a href="" class="btn">Leer más</a>
+                <p id="julia-preview">Julia es el amor perdido de Spike, una mujer envuelta en misterio y tragedia...</p>
+                <div id="julia-full" class="hidden">
+                    <p>Su vida ha estado marcada por la violencia y la traición, lo que la obliga a luchar por su propia supervivencia. Aunque su relación con Spike es intensa y apasionada, las circunstancias la han llevado a vivir en las sombras. Julia representa la esperanza y la pérdida, un símbolo del anhelo que impulsa a Spike en su búsqueda. Su historia es un reflejo del sacrificio y la lucha por encontrar el camino en un mundo caótico.</p>
+                </div>
+                <a href="javascript:void(0);" class="btn" onclick="toggleText('julia-full', 'julia-preview')">Leer más</a>
             </div>
         </div>
     </div>
+    
+    
+    
+    
+    
     
     <div class="container-footer">        
         <footer>
@@ -104,5 +116,6 @@
         }
     </script>
     
+    <script src="JS/script.js"></script>
 </body>
 </html>

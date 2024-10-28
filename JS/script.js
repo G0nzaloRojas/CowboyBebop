@@ -37,12 +37,12 @@ function togglePlayPause() {
         audioPlayer.play();
         playIcon.style.display = 'none';
         pauseIcon.style.display = 'inline';
-        albumLogo.classList.add('rotate'); // Iniciar rotación
+        albumLogo.classList.add('rotate'); 
     } else {
         audioPlayer.pause();
         playIcon.style.display = 'inline';
         pauseIcon.style.display = 'none';
-        albumLogo.classList.remove('rotate'); // Detener rotación
+        albumLogo.classList.remove('rotate'); 
     }
 }
 
@@ -92,3 +92,17 @@ progressContainer.addEventListener('click', (e) => {
 
     audioPlayer.currentTime = (clickX / width) * duration;
 });
+
+//Spike.html- parte de las cartas de Vicious y Julia
+function toggleText(fullId, previewId) {
+    const fullText = document.getElementById(fullId);
+    const previewText = document.getElementById(previewId);
+    
+    if (fullText.classList.contains('hidden')) {
+        fullText.classList.remove('hidden');
+        previewText.style.display = 'none';
+    } else {
+        fullText.classList.add('hidden');
+        previewText.style.display = 'block';
+    }
+}
