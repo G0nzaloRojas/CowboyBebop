@@ -7,6 +7,8 @@
     <link rel="stylesheet" type="text/css" href="CSS/Estilazo.css">
     <link rel="icon" type="image/png" href="Images/Icono.png">    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link  href="CSS/lightbox.css"  rel="stylesheet">
 </head>
 
 <body>
@@ -44,22 +46,55 @@
     </header>
 
     <section>
-        <h1 id="galeria-titlet">Galería</h1>
-        <article class="galeria-content">
-            <a class="example-image-link" href="" data-lightbox="" data-title=""><img class="" src="" alt=""/></a>
-            <a class="example-image-link" href="" data-lightbox="" data-title=""><img class="" src="" alt=""/></a>
-            <a class="example-image-link" href="" data-lightbox="" data-title=""><img class="" src="" alt=""/></a>
-            <a class="example-image-link" href="" data-lightbox="" data-title=""><img class="" src="" alt=""/></a>
-            <a class="example-image-link" href="" data-lightbox="" data-title=""><img class="" src="" alt=""/></a>
-            <a class="example-image-link" href="" data-lightbox="" data-title=""><img class="" src="" alt=""/></a>
-            <a class="example-image-link" href="" data-lightbox="" data-title=""><img class="" src="" alt=""/></a>
-            <a class="example-image-link" href="" data-lightbox="" data-title=""><img class="" src="" alt=""/></a>
-            <a class="example-image-link" href="" data-lightbox="" data-title=""><img class="" src="" alt=""/></a>
-            <a class="example-image-link" href="" data-lightbox="" data-title=""><img class="" src="" alt=""/></a>
-            <a class="example-image-link" href="" data-lightbox="" data-title=""><img class="" src="" alt=""/></a>
-            <a class="example-image-link" href="" data-lightbox="" data-title=""><img class="" src="" alt=""/></a>
+        <h1 id="h1Galeria">Galería</h1>   
+        <article class="articuloGaleria">
+            <div>
+                <a href="Galeria/Banda_Bebop.png" data-lightbox="Cowboy-Bebop" data-title="La Banda Bebop atrapando a Ed">
+                    <img src="Galeria/Banda_Bebop_MIN.png" alt="Travesura de Ed"/>
+                </a>
+                <a href="Galeria/Cowboy_Bebop.jpg" data-lightbox="Cowboy-Bebop" data-title="El grupo en un bar">
+                    <img src="Galeria/Cowboy_Bebop_MIN.png" alt="Los chicos en un bar"/>
+                </a>
+                <a href="Galeria/Faye.png" data-lightbox="Cowboy-Bebop" data-title="Faye en peligro">
+                    <img src="Galeria/Faye_MIN.png" alt="Faye siendo descubierta"/>
+                </a>
+            </div>
+            <div>
+                <a href="Galeria/Jet.png" data-lightbox="Cowboy-Bebop" data-title="Jet con sus bonsai">
+                    <img src="Galeria/Jet_MIN.png" alt="Jet cuidando sus plantas"/>
+                </a>
+                <a href="Galeria/Faye_Spike_fumando.png" data-lightbox="Cowboy-Bebop" data-title="Faye y Spike relajándose">
+                    <img src="Galeria/Faye_Spike_fumando_MIN.png" alt="Faye y Spike fumando"/>
+                </a>
+                <a href="Galeria/Faye_elegante.png" data-lightbox="Cowboy-Bebop" data-title="Faye con un vestido">
+                    <img src="Galeria/Faye_elegante_MIN.png" alt="Faye tirando facha"/>
+                </a>
+            </div>
+            <div>
+                <a href="Galeria/Spike_enla_nave.jpg" data-lightbox="Cowboy-Bebop" data-title="Spike manejando una nave">
+                    <img src="Galeria/Spike_enla_nave_MIN.png" alt="Spike manejando"/>
+                </a>
+                <a href="Galeria/Faye_agotada.png" data-lightbox="Cowboy-Bebop" data-title="Faye manejando estando cansada">
+                    <img src="Galeria/Faye_agotada_MIN.png" alt="Faye agotada"/>
+                </a>
+                <a href="Galeria/Faye_y_Spike.jpg" data-lightbox="Cowboy-Bebop" data-title="Faye y Spike descansando">
+                    <img src="Galeria/Faye_y_Spike_MIN.png" alt="Faye y Spike de chill"/>
+                </a>
+            </div>
+            <div>
+                <a href="Galeria/Jet_Spike.png" data-lightbox="Cowboy-Bebop" data-title="Jet y Spike en una misión">
+                    <img src="Galeria/Jet_Spike_MIN.png" alt="Jet y Spike durante una misión"/>
+                </a>
+                <a href="Galeria/Spike.png" data-lightbox="Cowboy-Bebop" data-title="Spike arreglando la nave">
+                    <img src="Galeria/Spike_MIN.png" alt="Spike arreglando"/>
+                </a>
+                <a href="Galeria/Spike_Y_Vicious.png" data-lightbox="Cowboy-Bebop" data-title="Spike peleando contra Vicious">
+                    <img src="Galeria/Spike_Y_Vicious_MIN.png" alt="Spike peleando con Vicious"/>
+                </a>
+            </div>
         </article>
     </section>
+    
     
     <div class="container-footer">        
         <footer>
@@ -85,5 +120,6 @@
          }
     </script>
     
+    <script src="JS/lightbox-plus-jquery.min.js"></script>
 </body>
 </html>

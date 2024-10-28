@@ -11,7 +11,6 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-color: #f0f0f0; /* Fondo */
-    color: #333; /* Texto */
     cursor: url('../Images/Cursor.png'), pointer;
 }
 
@@ -100,7 +99,7 @@ nav ul li ul li {
     max-width: 800px;
     margin: 20px auto; 
     padding: 20px;
-    background-color: white;
+    background-color: #1A1A2E;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); 
 }
@@ -118,6 +117,7 @@ nav ul li ul li {
 
 #texto_article {
     line-height: 1.6; 
+    color: #f1c40f;
 }
 
 #Img_Principal {
@@ -706,7 +706,7 @@ main.analisis {
 }
 
 .card-flip .back .link a {
-    color: #f1c40f;
+    color: whitesmoke;
     text-decoration: none; 
 }
 
@@ -727,6 +727,49 @@ main.analisis {
 .card-flip:hover .back {
     transform: rotateY(360deg);
 }
+
+/*GALERIA*/
+#h1Galeria {
+    text-align: center;
+    margin: 20px 0;
+    color: #333; /* Color del título */
+    font-size: 2.5em; /* Tamaño del título */
+}
+
+.articuloGaleria {
+    display: flex; /* Usar flexbox para alinear las imágenes en fila */
+    flex-wrap: wrap; /* Permite que las imágenes se ajusten a la siguiente fila */
+    justify-content: center; /* Centra las imágenes en la fila */
+    margin-bottom: 20px;
+    border-radius: 25px;
+}
+
+.articuloGaleria div {
+    display: flex; /* Usar flexbox para alinear imágenes */
+    justify-content: space-between; /* Espacio entre imágenes en una fila */
+    margin: 10px; /* Espacio entre filas */
+}
+
+.articuloGaleria div a {
+    margin: 5px; /* Espacio entre imágenes */
+}
+
+.articuloGaleria div img {
+    width: 300px; /* Ancho fijo de 300px */
+    height: 300px; /* Altura fija de 300px */
+    border-radius: 8px; /* Bordes redondeados */
+    background-color: lightskyblue; /* Color de fondo */
+    padding: 5px; /* Espacio interno */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: transform 0.3s, box-shadow 0.3s; /* Transición suave para el efecto */
+}
+
+.articuloGaleria div img:hover {
+    transform: scale(1.05); /* Aumentar el tamaño de la imagen al pasar el mouse */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Sombra más intensa */
+}
+
+
 
 
 /*CONTACTO*/
@@ -757,7 +800,7 @@ main.analisis {
 }
 
 .contact-form{
-    background: #222222 ;
+    background: #1A1A2E ;
 }
 
 .contact-form form {
@@ -772,7 +815,7 @@ main.analisis {
 .contact-form form p{
     margin: 0;
     padding: 1em;
-
+    color: #f1c40f;
 }
 
 .contact-form form button, .contact-form form input , .contact-form form textarea{
@@ -801,13 +844,14 @@ main.analisis {
 }
 
 .contact-info{
-    background: #000;
+    background: #3a4286de;
     text-align: center;
 }
 
 .contact-info h3 , .contact-info ul , .contact-info p{
     text-align: center;
     margin: 0 0 1rem 0;
+    color: #f1c40f;
 }
 
 .contact-info ul{
@@ -817,10 +861,11 @@ main.analisis {
 
 .contact-info ul li{
     padding: .3em;
+    color: #f1c40f;
 }
 
 .gif-saludo{
-    width: 300px;
+    width: 325px;
     height: auto;
     margin-bottom: 10px;
 }
