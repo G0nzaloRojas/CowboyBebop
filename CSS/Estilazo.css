@@ -398,6 +398,11 @@ main.analisis {
 
 
 /*PERSONAJES*/
+.titulo-principal {
+    text-align: center; /* Centrar el título principal */
+    color: #1e0d6d; /* Color del título principal */
+}
+
 .personajes {
     display: flex;
     flex-direction: column; 
@@ -406,7 +411,7 @@ main.analisis {
 .jet-content, .faye-content, .ed-content {
     display: flex; 
     align-items: center; 
-    background-color: #fff; 
+    background-color: #1A1A2E; /* Color de fondo de los cuadros */
     padding: 20px; 
     border-radius: 0.5rem; 
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); 
@@ -431,13 +436,19 @@ main.analisis {
     flex-grow: 1; 
 }
 
-.personaje h2, .faye-content h3, .personaje h4 {
+.jet-description h2, .faye-description h3, .ed-description h4 {
+    text-align: center; /* Centrar títulos de personajes */
+    color: #f1c40f; /* Color de los títulos de personajes */
     margin: 0 0 10px; 
+    font-size: 40px;
 }
 
-.personaje p, .faye-content p {
+.jet-description p, .faye-description p, .ed-description p {
     margin: 0; 
+    color: #f1c40f; 
+    font-size: 17px;
 }
+
 
 /*.card-content .btn{
     display: inline-block;
