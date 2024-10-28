@@ -15,7 +15,7 @@
         <div>
             <a href="index.html"><img src="Images/Logo.png" alt="Cowboy logo"></a>
         </div>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()"><i class="fa fa-bars"></i></a>
         <nav id="Menu" class="">
             <ul id="menu_bar">    
                 <li><a href="index.html">Home</a></li>
@@ -89,15 +89,15 @@
         </footer>
     </div>
 
-   <script type="text/javascript">
-        function myFunction() {
-         var x = document.getElementById("menu_bar");
-         if (x.className === "") {
-           x.className += " responsive";
-         } else {
-            x.className = "";
+    <script type="text/javascript">
+        function toggleMenu() {
+            var menu = document.getElementById("Menu");
+            if (menu.className === "") {
+                menu.className = "responsive";
+            } else {
+                menu.className = "";
             }
-         }
+        }
     </script>
     
 </body>

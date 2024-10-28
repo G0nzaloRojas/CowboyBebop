@@ -6,18 +6,14 @@
     <title>Cowboy Bebop</title>
     <link rel="stylesheet" type="text/css" href="CSS/Estilazo.css">
     <link rel="icon" type="image/png" href="Images/Icono.png">    
-    
-    <!--Font Awesome Icons-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 
 <body>
-    
     <header class="Encabezado">
         <div>
             <a href="index.html"><img src="Images/Logo.png" alt="Cowboy logo"></a>
         </div>
-        <a href="javascript:void(0);" class="icon" onclick="myFunction()"><i class="fa fa-bars"></i></a>
         <nav id="Menu">
             <ul id="menu_bar">    
                 <li><a href="index.html">Home</a></li>
@@ -57,33 +53,33 @@
             <div class="tracklist-section">
                 <h1>COWBOY BEBOP SOUNDTRACK</h1>
                 <p>Seatbelts • 17 tracks • 53 minutes</p>
-                <ul class="track-list">
-                    <li>01 Tank!</li>
-                    <li>02 Rush</li>
-                    <li>03 Spokey Dokey</li>
-                    <li>04 Bad Dog No Biscuits</li>
-                    <li>05 Cat Blues</li>
-                    <li>06 Cosmos</li>
-                    <li>07 Space Lion</li>
-                    <li>08 Waltz for Zizi</li>
-                    <li>09 Piano Black</li>
-                    <li>10 Pot City</li>
-                    <li>11 Too Good Too Bad</li>
-                    <li>12 Car 24</li>
-                    <li>13 The Egg and I</li>
-                    <li>14 Felt Tip Pen</li>
-                    <li>15 Rain</li>
-                    <li>16 Digging My Potato</li>
-                    <li>17 Memory</li>
+                <ul class="track-list" id="tracklist">
+                    <li data-src="Soundtrack/Tank!.mp3">01 Tank!</li>
+                    <li data-src="Soundtrack/Rush.mp3">02 Rush</li>
+                    <li data-src="Soundtrack/Spokey Dokey.mp3">03 Spokey Dokey</li>
+                    <li data-src="Soundtrack/Bad Dog No Biscuits.mp3">04 Bad Dog No Biscuits</li>
+                    <li data-src="Soundtrack/Cat Blues.mp3">05 Cat Blues</li>
+                    <li data-src="Soundtrack/Cosmos.mp3">06 Cosmos</li>
+                    <li data-src="Soundtrack/Space Lion.mp3">07 Space Lion</li>
+                    <li data-src="Soundtrack/Waltz for Zizi.mp3">08 Waltz for Zizi</li>
+                    <li data-src="Soundtrack/Piano Black.mp3">09 Piano Black</li>
+                    <li data-src="Soundtrack/Pot City.mp3">10 Pot City</li>
+                    <li data-src="Soundtrack/Too Good Too Bad.mp3">11 Too Good Too Bad</li>
+                    <li data-src="Soundtrack/Car 24.mp3">12 Car 24</li>
+                    <li data-src="Soundtrack/The Egg and I.mp3">13 The Egg and I</li>
+                    <li data-src="Soundtrack/Felt Tip Pen.mp3">14 Felt Tip Pen</li>
+                    <li data-src="Soundtrack/Rain.mp3">15 Rain</li>
+                    <li data-src="Soundtrack/Digging My potato.mp3">16 Digging My Potato</li>
+                    <li data-src="Soundtrack/Memory.mp3">17 Memory</li>
                 </ul>
             </div>
         </div>
 
         <div class="controls-section">
-            <div class="progress-bar">
+            <div class="progress-bar" id="progress-container">
                 <div class="progress"></div>
                 <div class="album-logo">
-                    <img src="Images/Portada_redondo.png" alt="Cowboy Bebop Logo">
+                    <img src="Images/Portada_redondo.png" alt="Cowboy Bebop Logo" class="album-cover" id="cover">
                 </div> 
             </div>
             
@@ -91,11 +87,9 @@
                 <button class="control-button" id="prevBtn">
                     <i class="fas fa-backward" aria-hidden="true"></i>
                 </button>
-                <button class="control-button" id="playBtn">
-                    <i class="fas fa-play" aria-hidden="true"></i>
-                </button>
-                <button class="control-button" id="pauseBtn">
-                    <i class="fas fa-pause" aria-hidden="true"></i>
+                <button class="control-button" id="playPauseBtn">
+                    <i class="fas fa-play" aria-hidden="true" id="playIcon"></i>
+                    <i class="fas fa-pause" aria-hidden="true" id="pauseIcon" style="display: none;"></i>
                 </button>
                 <button class="control-button" id="nextBtn">
                     <i class="fas fa-forward" aria-hidden="true"></i>
@@ -124,16 +118,7 @@
             <p>© 2024 All rights reserved to Rojas Martinez Gonzalo A.</p>
         </footer>
     </div>
-    <script type="text/javascript">
-        function myFunction() {
-            var x = document.getElementById("menu_bar");
-            if (x.className === "") {
-                x.className += " responsive";
-            } else {
-                x.className = "";
-            }
-        }
-    </script>
-    
+
+    <script src="JS/script.js"></script>
 </body>
 </html>
