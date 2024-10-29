@@ -904,3 +904,37 @@ main.analisis {
     height: auto;
     margin-bottom: 10px;
 }
+
+/*Smooth Back To Top Button */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #1725ee; /* Color del botón */
+    border-radius: 50%;
+    padding: 10px;
+    display: none; /* Oculto por defecto */
+    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+    transition: background-color 0.3s, opacity 0.3s ease; /* Transición suave */
+    opacity: 0; /* Inicialmente invisible */
+}
+
+.back-to-top.show {
+    display: block; /* Mostrar el botón */
+    opacity: 1; /* Hacerlo visible */
+}
+
+.back-to-top span {
+    color: #fff;
+    font-size: 3rem;
+    transition: 0.2s ease-out;
+}
+
+.back-to-top:hover {
+    background-color: #0e1aee; /* Color al pasar el mouse */
+}
+
+.back-to-top:hover span {
+    transform: translateY(-4px);
+}
+

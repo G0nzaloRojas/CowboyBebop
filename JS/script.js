@@ -118,23 +118,8 @@ function toggleText(fullId, previewId) {
     }
 }
 
-// Selecciona todos los elementos con la clase 'hidden-animate'
-const elementosAnimados = document.querySelectorAll('.hidden-animate');
 
-// Crea un nuevo IntersectionObserver
-const observer = new IntersectionObserver((entradas) => {
-    entradas.forEach((entrada) => {
-        if (entrada.isIntersecting) {
-            // Agrega la clase para mostrar la animación
-            entrada.target.classList.add('show-animate');
-            // Elimina la clase de ocultar si ya no es necesario
-            entrada.target.classList.remove('hidden-animate');
-            // Deja de observar el elemento
-            observer.unobserve(entrada.target);
-        }
-    });
-}, { threshold: 0.1 }); // Se activa cuando el 10% del elemento es visible
 
-// Observa cada elemento
-elementosAnimados.forEach((elemento) => observer.observe(elemento));
+
+
 
