@@ -265,6 +265,60 @@ footer a:nth-child(5):hover {
     background-color: #1DA1F2; /* Twitter */
 }
 
+/*EPISODIOS*/
+.menu-cafe {
+    max-width: 1200px; /* Ancho máximo para la sección */
+    margin: 0 auto; /* Centrar la sección */
+    padding: 20px; /* Espaciado interno */
+    background-color: #1A1A2E; /* Fondo oscuro */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
+#menu-cafe-titulo {
+    text-align: center; /* Centrar el título */
+    color: #f1c40f; /* Color dorado */
+    font-size: 2.5rem; /* Tamaño de fuente grande */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+.platillo {
+    background-color: #2E2E3E; /* Fondo más claro para cada episodio */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 15px; /* Espaciado interno */
+    margin-bottom: 20px; /* Espacio entre episodios */
+    transition: transform 0.2s; /* Suavizar la transformación */
+}
+
+.platillo:hover {
+    transform: translateY(-5px); /* Efecto de elevar el platillo al pasar el mouse */
+}
+
+.episodio-imagen {
+    width: 100%; /* Imagen ocupa el ancho completo del contenedor */
+    max-width: 550px; /* Limitar ancho máximo para la imagen */
+    height: auto; /* Mantener la proporción de la imagen */
+    border-radius: 5px; /* Bordes redondeados en la imagen */
+    margin-bottom: 10px; /* Espacio debajo de la imagen */
+    display: block; /* Evita espacio en la parte inferior */
+    margin-left: auto; /* Centrar la imagen */
+    margin-right: auto; /* Centrar la imagen */
+}
+
+.platillo p {
+    color: #f1c40f; /* Color del texto */
+    margin: 5px 0; /* Espacio vertical entre párrafos */
+}
+
+.platillo strong {
+    color: #fff; /* Color blanco para texto destacado */
+}
+
+.platillo em {
+    color: #f39c12; /* Color diferente para el texto en cursiva */
+}
+
+
 
 /*ANALISIS*/
 main.analisis {
