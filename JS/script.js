@@ -1,3 +1,4 @@
+// Variables del reproductor de audio
 const tracklist = document.getElementById('tracklist');
 const audioPlayer = document.getElementById('audio-player');
 const playPauseBtn = document.getElementById('playPauseBtn');
@@ -38,12 +39,12 @@ function togglePlayPause() {
         audioPlayer.play();
         playIcon.style.display = 'none';
         pauseIcon.style.display = 'inline';
-        document.querySelector('.player-page').classList.add('playing'); // Agregar clase para el reproductor
+        document.querySelector('.player-page').classList.add('playing');
     } else {
         audioPlayer.pause();
         playIcon.style.display = 'inline';
         pauseIcon.style.display = 'none';
-        document.querySelector('.player-page').classList.remove('playing'); // Remover clase para el reproductor
+        document.querySelector('.player-page').classList.remove('playing');
     }
 }
 
@@ -69,10 +70,10 @@ volumeSlider.addEventListener('input', () => {
 // Muteo y desmuteo
 volumeBtn.addEventListener('click', () => {
     isMuted = !isMuted;
-    audioPlayer.muted = isMuted; // Mute o desmute
+    audioPlayer.muted = isMuted;
     volumeBtn.innerHTML = isMuted 
         ? '<i class="fas fa-volume-mute" aria-hidden="true"></i>' 
-        : '<i class="fas fa-volume-up" aria-hidden="true"></i>'; // Cambiar icono
+        : '<i class="fas fa-volume-up" aria-hidden="true"></i>';
 });
 
 // Eventos de reproducción
@@ -103,7 +104,7 @@ progressContainer.addEventListener('click', (e) => {
     audioPlayer.currentTime = (clickX / width) * duration;
 });
 
-// Spike.html - parte de las cartas de Vicious y Julia
+// Toggle de texto en Spike.html
 function toggleText(fullId, previewId) {
     const fullText = document.getElementById(fullId);
     const previewText = document.getElementById(previewId);
@@ -116,3 +117,24 @@ function toggleText(fullId, previewId) {
         previewText.style.display = 'block';
     }
 }
+
+// Selecciona todos los elementos con la clase 'hidden-animate'
+const elementosAnimados = document.querySelectorAll('.hidden-animate');
+
+// Crea un nuevo IntersectionObserver
+const observer = new IntersectionObserver((entradas) => {
+    entradas.forEach((entrada) => {
+        if (entrada.isIntersecting) {
+            // Agrega la clase para mostrar la animación
+            entrada.target.classList.add('show-animate');
+            // Elimina la clase de ocultar si ya no es necesario
+            entrada.target.classList.remove('hidden-animate');
+            // Deja de observar el elemento
+            observer.unobserve(entrada.target);
+        }
+    });
+}, { threshold: 0.1 }); // Se activa cuando el 10% del elemento es visible
+
+// Observa cada elemento
+elementosAnimados.forEach((elemento) => observer.observe(elemento));
+

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,15 +8,13 @@
     <link rel="icon" type="image/png" href="Images/Icono.png">    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
-
 <body>
-    
     <header class="Encabezado">
         <div>
             <a href="index.html"><img src="Images/Logo.png" alt="Cowboy logo"></a>
         </div>
         <a href="javascript:void(0);" class="icon" onclick="toggleMenu()"><i class="fa fa-bars"></i></a>
-        <nav id="Menu" class="">
+        <nav id="Menu">
             <ul id="menu_bar">    
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#">Sobre el Anime</a>
@@ -44,34 +42,35 @@
     </header>
 
     <h1 class="titulo-principal">Personajes Principales</h1>
-    <br>
-    <section>
-         <article class="personajes">
-            <div class="jet-content">
+    <section class="hidden-personajes">
+        <article class="personajes">
+            <div class="jet-content hidden-animate">
                 <img src="Images/Personajes/Jet.gif" alt="Jet Black" class="jet-image">
                 <div class="jet-description">
                     <h2>Jet Black</h2>
-                    <p>Ex-policía convertido en cazarrecompensas, <strong>Jet Black es el corazón del Bebop</strong>. Con su fuerte sentido de la justicia y su pasado lleno de secretos, carga con una melancolía que lo impulsa a buscar redención. Aunque su exterior es serio y a menudo cínico, su lealtad hacia sus amigos y su deseo de protegerlos muestran su verdadera humanidad. A lo largo de la serie, Jet también se enfrenta a sus propios demonios, lidiando con traiciones pasadas y el dolor de haber perdido a seres queridos. En un mundo de caos, Jet es la voz de la razón, navegando entre su propio dolor y el deber hacia su equipo, siempre dispuesto a dar lo mejor de sí mismo para mantener la unidad entre sus compañeros.</p>
+                    <p>Ex-policía convertido en cazarrecompensas, Jet Black es el corazón del Bebop. Con su fuerte sentido de la justicia y su pasado lleno de secretos, carga con una melancolía que lo impulsa a buscar redención. Aunque su exterior es serio y a menudo cínico, su lealtad hacia sus amigos y su deseo de protegerlos muestran su verdadera humanidad. En un mundo de caos, Jet es la voz de la razón, navegando entre su propio dolor y el deber hacia su equipo.</p>
                 </div>
             </div>
-    
-            <div class="faye-content">
+        
+            <div class="faye-content hidden-animate">
                 <div class="faye-description">
                     <h3>Faye Valentine</h3>
-                    <p>Faye Valentine es una femme fatale con un pasado oscuro y misterioso. Cazadora de recompensas y experta en manipulación, su búsqueda de identidad y pertenencia la lleva a través de un camino lleno de desafíos y desengaños. Detrás de su fachada de confianza y astucia, <strong>Faye oculta una vulnerabilidad que resuena con todos los que han perdido algo importante</strong>. A medida que avanza la historia, Faye comienza a descubrir la verdad sobre su pasado y a reconciliarse con las decisiones que ha tomado. Su lucha por recuperar su vida perdida nos recuerda que, a veces, el verdadero tesoro es el amor y la conexión con los demás, desafiando las expectativas que los demás tienen sobre ella y mostrando que incluso los corazones más endurecidos pueden encontrar la esperanza.</p>
+                    <p>Faye Valentine es una femme fatale con un pasado oscuro y misterioso. Cazadora de recompensas y experta en manipulación, su búsqueda de identidad y pertenencia la lleva a través de un camino lleno de desafíos y desengaños. Detrás de su fachada de confianza y astucia, Faye oculta una vulnerabilidad que resuena con todos los que han perdido algo importante. Su lucha por recuperar su vida perdida nos recuerda que, a veces, el verdadero tesoro es el amor y la conexión con los demás.</p>
                 </div>
                 <img src="Images/Personajes/Faye.gif" alt="Faye Valentine" class="faye-image">
             </div>
-    
-            <div class="ed-content">
+        
+            <div class="ed-content hidden-animate">
                 <img src="Images/Personajes/Ed.gif" alt="Edward" class="ed-image">
                 <div class="ed-description">
                     <h4>Edward</h4>
-                    <p>Ed, la brillante hacker del grupo, es una niña prodigio con una personalidad exuberante y peculiar. Su risa contagiosa y su visión única del mundo aportan un aire de ligereza al Bebop, contrastando con las cargas emocionales de sus compañeros. A pesar de su juventud, <strong>Ed muestra una sabiduría sorprendente y una profunda comprensión de la soledad y la búsqueda de la familia</strong>. Es capaz de conectarse con los demás a un nivel que trasciende la edad, mostrando que la inocencia puede ser una fortaleza. Con su espíritu libre, nos enseña que a veces el verdadero sentido de pertenencia se encuentra en los lazos inesperados. Además, su habilidad para resolver problemas tecnológicos se convierte en un recurso valioso para el equipo, haciendo de ella un miembro indispensable en sus aventuras.</p>
+                    <p>Ed, la brillante hacker del grupo, es una niña prodigio con una personalidad exuberante y peculiar. Su risa contagiosa y su visión única del mundo aportan un aire de ligereza al Bebop, contrastando con las cargas emocionales de sus compañeros. A pesar de su juventud, Ed muestra una sabiduría sorprendente y una profunda comprensión de la soledad y la búsqueda de la familia. Con su espíritu libre, nos enseña que a veces el verdadero sentido de pertenencia se encuentra en los lazos inesperados.</p>
                 </div>
             </div>
         </article>
     </section>
+    
+    
 
     <div class="container-footer">        
         <footer>
@@ -86,16 +85,6 @@
         </footer>
     </div>
 
-    <script type="text/javascript">
-        function toggleMenu() {
-            var menu = document.getElementById("Menu");
-            if (menu.className === "") {
-                menu.className = "responsive";
-            } else {
-                menu.className = "";
-            }
-        }
-    </script>
-    
+    <script src="JS/scriptPersonajes.js"></script>
 </body>
 </html>

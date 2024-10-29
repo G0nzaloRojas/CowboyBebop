@@ -404,7 +404,6 @@ main.analisis {
     margin: 20px 0; 
 }
 
-
 /*PERSONAJES*/
 .titulo-principal {
     text-align: center; 
@@ -414,21 +413,22 @@ main.analisis {
 .personajes {
     display: flex;
     flex-direction: column; 
-    margin-bottom: 50px; /* Aumentar el margen inferior aquí */
+    margin-bottom: 50px; 
 }
 
 .jet-content, .faye-content, .ed-content {
     display: flex; 
-    align-items: center; 
+    align-items: flex-start; 
     background-color: #1A1A2E; 
     padding: 20px; 
     border-radius: 0.5rem; 
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); 
     margin: 20px; 
+    overflow: hidden; 
 }
 
 .jet-image, .faye-image, .ed-image {
-    max-width: 380px; 
+    max-width: 450px; 
     height: auto; 
     margin-right: 15px; 
 }
@@ -437,11 +437,15 @@ main.analisis {
     flex-direction: row; 
 }
 
-.faye-content .faye-image {
-    margin-left: 15px; 
+.faye-description p{
+    flex-grow: 1; 
+    text-align: left;
+    color: #f1c40f;
+    margin: 0; 
+    font-size: 18px;
 }
 
-.jet-description, .faye-description, .ed-description {
+.jet-description, .ed-description {
     flex-grow: 1; 
 }
 
@@ -449,13 +453,25 @@ main.analisis {
     text-align: center;
     color: #f1c40f; 
     margin: 0 0 10px; 
-    font-size: 40px;
+    font-size: 40px; 
 }
 
-.jet-description p, .faye-description p, .ed-description p {
+.jet-description p , .ed-description p {
     margin: 0; 
     color: #f1c40f; 
-    font-size: 17px;
+    text-align: justify; 
+    font-size: 18px;
+}
+
+.hidden-animate {
+    opacity: 0; 
+    transform: scale(0.8); 
+    transition: all ease-out 1.2s; 
+}
+
+.mostrar {
+    opacity: 1; 
+    transform: scale(1); 
 }
 
 /*.card-content .btn{
