@@ -12,7 +12,9 @@ function setupVideoPopup() {
 
         // Reproducir el video cuando esté cargado
         video.onloadedmetadata = () => {
-            video.play();
+            video.play().catch(error => {
+                console.error("Error al intentar reproducir el video: ", error);
+            });
         };
 
         // Marcar como mostrado cuando el video termine
@@ -56,3 +58,4 @@ function closeVideoPopup() {
 if (window.location.pathname.includes("index.html")) {
     window.addEventListener('DOMContentLoaded', setupVideoPopup); // Configurar el popup del video
 }
+
