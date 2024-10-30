@@ -31,19 +31,22 @@ backToTopButton.addEventListener('click', function(e) {
 
 
 let currentPage = 0;
-const itemsPerPage = 3; // Asegúrate de que esto esté en 4
+const itemsPerPage = 3; // Número de episodios por página
 
+// Función para mostrar los episodios según la página actual
 function displayEpisodes() {
     const allEpisodes = document.querySelectorAll(".platillo");
     allEpisodes.forEach((episode, index) => {
+        // Muestra solo los episodios que pertenecen a la página actual
         episode.style.display = (index >= currentPage * itemsPerPage && index < (currentPage + 1) * itemsPerPage) ? "block" : "none";
     });
 
     // Deshabilitar botones de navegación según la página actual
-    document.querySelector(".navegacion button:first-child").disabled = currentPage === 0;
-    document.querySelector(".navegacion button:last-child").disabled = (currentPage + 1) * itemsPerPage >= allEpisodes.length;
+    document.querySelector(".navegacion button:first-child").disabled = currentPage === 0; // Botón "Anterior"
+    document.querySelector(".navegacion button:last-child").disabled = (currentPage + 1) * itemsPerPage >= allEpisodes.length; // Botón "Siguiente"
 }
 
+// Función para ir a la página anterior
 function prevPage() {
     if (currentPage > 0) {
         currentPage--;
@@ -51,6 +54,7 @@ function prevPage() {
     }
 }
 
+// Función para ir a la página siguiente
 function nextPage() {
     const allEpisodes = document.querySelectorAll(".platillo");
     if ((currentPage + 1) * itemsPerPage < allEpisodes.length) {
@@ -60,23 +64,5 @@ function nextPage() {
 }
 
 // Cargar episodios al inicio
-window.onload = displayEpisodes; 
-
-
-
-function closePopup() {
-    document.getElementById('video-popup').style.display = 'none'; // Ocultar popup
-    document.getElementById('section').style.display = 'block'; // Mostrar contenido
-    document.getElementById('trailer').style.display = 'block'; // Mostrar el trailer
-}
-
-window.onload = function() {
-    document.getElementById('video-popup').style.display = 'flex'; // Mostrar el popup
-    document.getElementById('section').style.display = 'none'; // Ocultar contenido al inicio
-    document.getElementById('trailer').style.display = 'none'; // Ocultar el trailer al inicio
-
-    // Usar un temporizador para ocultar el popup y mostrar el contenido después de 89 segundos
-    var videoDuration = 89; // Duración en segundos del video
-    setTimeout(closePopup, videoDuration * 1000); // Cerrar popup después de 89 segundos
-};
+window.onload = displayEpisodes; // Ejecuta la función al cargar la página
 
