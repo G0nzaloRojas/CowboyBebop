@@ -117,9 +117,3 @@ function toggleText(fullId, previewId) {
         previewText.style.display = 'block';
     }
 }
-
-
-
-
-
-

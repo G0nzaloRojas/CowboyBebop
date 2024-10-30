@@ -12,20 +12,52 @@ seccionesOcultas.forEach((seccion) => observer.observe(seccion));
 // Código para el botón "Volver Arriba"
 const backToTopButton = document.querySelector('.back-to-top');
 
-// Mostrar y ocultar el botón según el desplazamiento
 window.addEventListener('scroll', function() {
-    if (window.scrollY > 300) { // Ajusta el valor según lo que prefieras
-        backToTopButton.classList.add('show'); // Muestra el botón
+    if (window.scrollY > 300) {
+        backToTopButton.classList.add('show');
     } else {
-        backToTopButton.classList.remove('show'); // Oculta el botón
+        backToTopButton.classList.remove('show');
     }
 });
 
-// Desplazamiento suave al hacer clic en el botón
 backToTopButton.addEventListener('click', function(e) {
-    e.preventDefault(); // Evitar el comportamiento predeterminado del enlace
+    e.preventDefault();
     window.scrollTo({
         top: 0,
-        behavior: 'smooth' // Desplazamiento suave
+        behavior: 'smooth'
     });
 });
+
+
+
+let currentPage = 0;
+const itemsPerPage = 3; // Asegúrate de que esto esté en 4
+
+function displayEpisodes() {
+    const allEpisodes = document.querySelectorAll(".platillo");
+    allEpisodes.forEach((episode, index) => {
+        episode.style.display = (index >= currentPage * itemsPerPage && index < (currentPage + 1) * itemsPerPage) ? "block" : "none";
+    });
+
+    // Deshabilitar botones de navegación según la página actual
+    document.querySelector(".navegacion button:first-child").disabled = currentPage === 0;
+    document.querySelector(".navegacion button:last-child").disabled = (currentPage + 1) * itemsPerPage >= allEpisodes.length;
+}
+
+function prevPage() {
+    if (currentPage > 0) {
+        currentPage--;
+        displayEpisodes();
+    }
+}
+
+function nextPage() {
+    const allEpisodes = document.querySelectorAll(".platillo");
+    if ((currentPage + 1) * itemsPerPage < allEpisodes.length) {
+        currentPage++;
+        displayEpisodes();
+    }
+}
+
+// Cargar episodios al inicio
+window.onload = displayEpisodes; 
