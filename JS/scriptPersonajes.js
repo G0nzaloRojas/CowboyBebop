@@ -61,3 +61,22 @@ function nextPage() {
 
 // Cargar episodios al inicio
 window.onload = displayEpisodes; 
+
+
+
+function closePopup() {
+    document.getElementById('video-popup').style.display = 'none'; // Ocultar popup
+    document.getElementById('section').style.display = 'block'; // Mostrar contenido
+    document.getElementById('trailer').style.display = 'block'; // Mostrar el trailer
+}
+
+window.onload = function() {
+    document.getElementById('video-popup').style.display = 'flex'; // Mostrar el popup
+    document.getElementById('section').style.display = 'none'; // Ocultar contenido al inicio
+    document.getElementById('trailer').style.display = 'none'; // Ocultar el trailer al inicio
+
+    // Usar un temporizador para ocultar el popup y mostrar el contenido después de 89 segundos
+    var videoDuration = 89; // Duración en segundos del video
+    setTimeout(closePopup, videoDuration * 1000); // Cerrar popup después de 89 segundos
+};
+

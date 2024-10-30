@@ -265,6 +265,29 @@ footer a:nth-child(5):hover {
     background-color: #1DA1F2; /* Twitter */
 }
 
+
+
+
+#video-popup {
+    display: flex;
+    position: fixed;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Asegúrate de que esté encima de otros elementos */
+}
+
+#video-popup video {
+    width: 100%; /* Ancho completo */
+    height: auto; /* Mantiene la proporción del video */
+    max-width: 800px; /* Ancho máximo */
+}
+
+
 /*EPISODIOS*/
 .menu-cafe {
     max-width: 1200px;
