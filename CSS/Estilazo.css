@@ -316,8 +316,8 @@ footer a:nth-child(5):hover {
 }
 
 .episodio-imagen {
-    width: 100%; /* Ancho completo */
-    max-width: 600px; /* Ancho máximo */
+    width: 90%; /* Ancho completo */
+    max-width: 580px; /* Ancho máximo */
     height: auto; /* Altura automática */
     border-radius: 5px; /* Bordes redondeados */
     margin-bottom: 10px; /* Espacio debajo de la imagen */
@@ -329,6 +329,7 @@ footer a:nth-child(5):hover {
 .platillo p {
     color: #f1c40f; /* Color del texto */
     margin: 5px 0; /* Espaciado en los párrafos */
+    font-size: 16px;
 }
 
 .platillo strong {
@@ -357,8 +358,6 @@ footer a:nth-child(5):hover {
 .navegacion button:hover {
     background-color: #f39c12; /* Color al pasar el ratón */
 }
-
-
 
 
 /*ANALISIS*/
