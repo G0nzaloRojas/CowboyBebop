@@ -38,6 +38,8 @@ function setupVideoPopup() {
             closeVideoPopup(); // Cerrar el popup después de 90 segundos
         }, videoDurationInSeconds * 1000); // Convertir a milisegundos
     } else {
+        video.pause(); // Asegurarse de que el video esté pausado
+        video.currentTime = 0; // Reiniciar el video
         videoPopup.style.display = 'none'; // Ocultar si ya se mostró
         section.style.display = 'block'; // Mostrar contenido
         trailer.style.display = 'block'; // Mostrar el trailer
@@ -58,4 +60,3 @@ function closeVideoPopup() {
 if (window.location.pathname.includes("index.html")) {
     window.addEventListener('DOMContentLoaded', setupVideoPopup); // Configurar el popup del video
 }
-
