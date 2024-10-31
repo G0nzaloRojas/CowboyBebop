@@ -274,9 +274,10 @@ footer a:nth-child(5):hover {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
-    justify-content: center;
-    align-items: center;
+    justify-content: center; /* Centrado horizontalmente */
+    align-items: center; /* Centrado verticalmente */
     z-index: 999; /* Asegúrate de que esté encima de otros elementos */
+    display: flex; /* Asegúrate de que sea un contenedor flex */
 }
 
 #video-popup video {
@@ -284,6 +285,7 @@ footer a:nth-child(5):hover {
     height: auto; /* Mantiene la proporción del video */
     max-width: 800px; /* Ancho máximo */
 }
+
 
 
 /*EPISODIOS*/
