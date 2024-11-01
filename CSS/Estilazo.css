@@ -278,14 +278,29 @@ footer a:nth-child(5):hover {
     align-items: center; /* Centrado verticalmente */
     z-index: 999; /* Asegúrate de que esté encima de otros elementos */
     display: flex; /* Asegúrate de que sea un contenedor flex */
+    flex-direction: column; /* Alinear los elementos en columna */
 }
 
-#video-popup video {
+#intro-video {
     width: 100%; /* Ancho completo */
     height: auto; /* Mantiene la proporción del video */
     max-width: 800px; /* Ancho máximo */
 }
 
+#play-button {
+    background-color: #ff4081; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px 20px; /* Espaciado interno */
+    font-size: 16px; /* Tamaño de fuente */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    margin-top: 20px; /* Espacio superior para separarlo del video */
+}
+
+#play-button:hover {
+    background-color: #ff1e63; /* Cambia el color al pasar el mouse */
+}
 
 
 /*EPISODIOS*/

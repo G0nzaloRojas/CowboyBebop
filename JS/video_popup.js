@@ -3,6 +3,7 @@ function setupVideoPopup() {
     const section = document.getElementById('section');
     const trailer = document.getElementById('trailer');
     const video = document.getElementById('intro-video');
+    const playButton = document.getElementById('play-button');
 
     // Mostrar el popup solo en la primera visita
     if (!sessionStorage.getItem('videoShown')) {
@@ -10,12 +11,14 @@ function setupVideoPopup() {
         section.style.display = 'none'; // Ocultar contenido
         trailer.style.display = 'none'; // Ocultar trailer
 
-        // Intentar reproducir el video automáticamente
-        video.muted = false; // Asegúrate de que no esté silenciado en la primera visita
-        video.play().then(() => {
-            console.log("Video se está reproduciendo automáticamente."); // Para depuración
-        }).catch(error => {
-            console.error("Error al intentar reproducir el video: ", error);
+        // Agregar evento al botón de reproducir
+        playButton.addEventListener('click', () => {
+            video.muted = false; // Desmutear el video
+            video.play().then(() => {
+                playButton.style.display = 'none'; // Ocultar botón al reproducir
+            }).catch(error => {
+                console.error("Error al intentar reproducir el video: ", error);
+            });
         });
 
         // Marcar como mostrado cuando el video termine
