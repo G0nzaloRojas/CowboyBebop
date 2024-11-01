@@ -373,7 +373,7 @@ footer a:nth-child(5):hover {
     border: none; /* Sin borde */
     padding: 10px 15px; /* Relleno de los botones */
     margin: 0 10px; /* Espacio lateral */
-    cursor: pointer; /* Cambia el cursor al pasar */
+    cursor: url('../Images/Pointer.png') , auto; 
     border-radius: 5px; /* Bordes redondeados */
 }
 
