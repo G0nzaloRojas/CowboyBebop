@@ -12,7 +12,9 @@ body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0; /* Fondo */
     cursor: url('../Images/Cursor.png'), auto;
+    background-image: url('../Images/a.png');
 }
+
 
 .icon {
     display: none; 
@@ -423,7 +425,9 @@ main.analisis {
     margin: 0; 
     margin-bottom: 10px; 
     font-size: 35px;
+    color: #eefcffcc;
     text-align: center;
+    font-family: 'Pacifico',cursive;
 }
 
 .contenido-analisis {
@@ -472,9 +476,8 @@ main.analisis {
 }
 
 .spike-description h1 {
-    margin: 0; 
-    margin-bottom: 30px; 
-    margin-top: 25px;
+    margin: 0;
+    margin-bottom: 25px; 
     font-size: 40px;
     text-align: center;
 }
@@ -638,7 +641,7 @@ main.analisis {
     margin: 50px;
     border-radius: 15px;
     overflow: hidden;
-    background-color: #6a83a86c;
+    background-color: #16181a6c;
 }
 
 .content {
@@ -685,7 +688,7 @@ main.analisis {
 .tracklist-section {
     flex: 1;
     text-align: center; 
-    color: #1e0ff1;
+    color: #0f71f1;
     padding: 10px; 
     margin-top: 20px; 
 }
@@ -700,11 +703,11 @@ main.analisis {
     padding: 5px;
     cursor: pointer;
     transition: color 0.3s ease;
-    color: #f10f6d; 
+    color: rgb(229, 107, 240); 
 }
 
 .track-list li:hover {
-    color: #007BFF; 
+    color: #00ff73; 
 }
 
 .track-list li.active { 
