@@ -105,7 +105,7 @@ progressContainer.addEventListener('click', (e) => {
 });
 
 
-// Para que muestre el texto de las cartas en  Spike.html
+// Para que muestre el texto de las cartas en Spike.html
 function toggleText(fullId, previewId) {
     const fullText = document.getElementById(fullId);
     const previewText = document.getElementById(previewId);
