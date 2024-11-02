@@ -47,14 +47,14 @@ function setupVideoPopup() {
 
 function closeVideoPopup() {
     const videoPopup = document.getElementById('video-popup');
+    const section = document.getElementById('section');
+    const trailer = document.getElementById('trailer');
     const video = document.getElementById('intro-video');
 
     video.pause(); // Pausar el video
     video.currentTime = 0; // Reiniciar el video
     videoPopup.style.display = 'none'; // Cerrar el popup
+    section.style.display = 'block'; // Mostrar contenido
+    trailer.style.display = 'block'; // Mostrar el trailer
 }
 
-// Solo ejecutar en index.html
-if (window.location.pathname.includes("index.html")) {
-    window.addEventListener('DOMContentLoaded', setupVideoPopup); // Configurar el popup del video
-}
