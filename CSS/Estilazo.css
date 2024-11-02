@@ -607,7 +607,7 @@ main.analisis {
     margin: 50px;
     border-radius: 15px;
     overflow: hidden;
-    background-color: #c4e7e188; 
+    background-color: #6a83a86c;
 }
 
 .content {
@@ -646,14 +646,10 @@ main.analisis {
     width: 350px; 
     height: 350px; 
     transform: translate(0, -50%); 
-    transition: opacity 0.5s ease;
-    opacity: 1;
+    opacity: 1; 
     z-index: -1; 
 }
 
-.paused .cd-disc {
-    opacity: 0; 
-}
 
 .tracklist-section {
     flex: 1;
@@ -702,7 +698,7 @@ main.analisis {
 
 .progress {
     height: 100%;
-    background-color: #007BFF;
+    background-color: #e0a016;
     width: 0%;
     border-radius: 5px;
 }
