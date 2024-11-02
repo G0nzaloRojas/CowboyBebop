@@ -290,24 +290,24 @@ footer a:nth-child(5):hover {
 
 
 #video-popup {
-    display: none; /* Inicialmente oculto */
+    display: none;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.8); /* Fondo oscuro */
-    justify-content: center; /* Centrado horizontalmente */
-    align-items: center; /* Centrado verticalmente */
-    z-index: 999; /* Asegúrate de que esté encima de otros elementos */
-    display: flex; /* Asegúrate de que sea un contenedor flex */
-    flex-direction: column; /* Alinear los elementos en columna */
+    background: rgba(0, 0, 0, 0.8); 
+    justify-content: center; 
+    align-items: center; 
+    z-index: 999;
+    display: flex; 
+    flex-direction: column; 
 }
 
 #intro-video {
-    width: 100%; /* Ancho completo */
-    height: auto; /* Mantiene la proporción del video */
-    max-width: 800px; /* Ancho máximo */
+    width: 100%; 
+    height: auto; 
+    max-width: 800px;
 }
 
 #play-button {
@@ -322,7 +322,7 @@ footer a:nth-child(5):hover {
 }
 
 #play-button:hover {
-    background-color: #ff1e63; /* Cambia el color al pasar el mouse */
+    background-color: #53098f; /* Cambia el color al pasar el mouse */
 }
 
 
@@ -341,6 +341,7 @@ footer a:nth-child(5):hover {
     color: #f1c40f; /* Color del título */
     font-size: 2.5rem; /* Tamaño del título */
     margin-bottom: 20px; /* Espacio debajo del título */
+    font-family: 'Pacifico', cursive;
 }
 
 .platillo {
@@ -352,7 +353,6 @@ footer a:nth-child(5):hover {
     margin-bottom: 20px; /* Espacio entre episodios */
     transition: transform 0.2s; /* Efecto al pasar el ratón */
 }
-
 
 
 .platillo:hover {
@@ -371,38 +371,45 @@ footer a:nth-child(5):hover {
 }
 
 .platillo p {
-    color: #f1c40f; /* Color del texto */
-    margin: 5px 0; /* Espaciado en los párrafos */
-    font-size: 16px;
-    word-wrap: break-word; /* Asegura que las palabras largas se rompan */
+    color: #f1c40f; 
+    margin: 5px 0; 
+    font-size: 17px;
+    word-wrap: break-word; 
+}
+
+.platillo h2{
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    color: #d0e9e9;
 }
 
 
 .platillo strong {
-    color: #fff; /* Color del texto en negrita */
+    color: #fff; 
 }
 
 .platillo em {
-    color: #f39c12; /* Color del texto en cursiva */
+    color: #f39c12; 
 }
 
 .navegacion {
-    text-align: center; /* Centra los botones de navegación */
-    margin-top: 20px; /* Espaciado superior */
+    text-align: center; 
+    margin-top: 20px; 
 }
 
 .navegacion button {
-    background-color: #f1c40f; /* Color de fondo de los botones */
-    color: #1A1A2E; /* Color del texto de los botones */
-    border: none; /* Sin borde */
-    padding: 10px 15px; /* Relleno de los botones */
-    margin: 0 10px; /* Espacio lateral */
+    background-color: #e93818; 
+    color: #d1d1dd; 
+    border: none; 
+    padding: 10px 15px; 
+    margin: 0 10px; 
     cursor: url('../Images/Pointer.png') , auto; 
-    border-radius: 5px; /* Bordes redondeados */
+    border-radius: 5px; 
+    font-size: 15px;
 }
 
 .navegacion button:hover {
-    background-color: #f39c12; /* Color al pasar el ratón */
+    background-color: #126cf3; 
 }
 
 
@@ -476,7 +483,7 @@ main.analisis {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    margin-top: 50px; /* Reducido el espacio entre el título y las cartas */
+    margin-top: 50px; 
     gap: 20px;
 }
 
@@ -1046,18 +1053,18 @@ main.analisis {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #1725ee; /* Color del botón */
+    background-color: #1725ee; 
     border-radius: 50%;
     padding: 10px;
-    display: none; /* Oculto por defecto */
-    z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
-    transition: background-color 0.3s, opacity 0.3s ease; /* Transición suave */
-    opacity: 0; /* Inicialmente invisible */
+    display: none; 
+    z-index: 1000; 
+    transition: background-color 0.3s, opacity 0.3s ease; 
+    opacity: 0; 
 }
 
 .back-to-top.show {
-    display: block; /* Mostrar el botón */
-    opacity: 1; /* Hacerlo visible */
+    display: block; 
+    opacity: 1; 
 }
 
 .back-to-top span {
@@ -1067,7 +1074,7 @@ main.analisis {
 }
 
 .back-to-top:hover {
-    background-color: #ee0e33; /* Color al pasar el mouse */
+    background-color: #ee0e33; 
 }
 
 .back-to-top:hover span {
