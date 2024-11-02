@@ -7,7 +7,7 @@ const nextBtn = document.getElementById('nextBtn');
 const volumeSlider = document.querySelector('.volume-slider');
 const playIcon = document.getElementById('playIcon');
 const pauseIcon = document.getElementById('pauseIcon');
-const volumeBtn = document.getElementById('volumeBtn'); // Botón de volumen
+const volumeBtn = document.getElementById('volumeBtn'); 
 
 let currentTrackIndex = 0;
 let isMuted = false;
@@ -104,7 +104,8 @@ progressContainer.addEventListener('click', (e) => {
     audioPlayer.currentTime = (clickX / width) * duration;
 });
 
-// Toggle de texto en Spike.html
+
+// Para que muestre el texto de las cartas en  Spike.html
 function toggleText(fullId, previewId) {
     const fullText = document.getElementById(fullId);
     const previewText = document.getElementById(previewId);
