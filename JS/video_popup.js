@@ -23,7 +23,6 @@ function setupVideoPopup() {
 
         // Marcar como mostrado cuando el video termine
         video.onended = () => {
-            console.log("El video ha terminado."); // Para depuración
             sessionStorage.setItem('videoShown', 'true'); // Marcar como mostrado
             closeVideoPopup(); // Cerrar el popup
         };
@@ -58,3 +57,7 @@ function closeVideoPopup() {
     trailer.style.display = 'block'; // Mostrar el trailer
 }
 
+// Solo ejecutar en index.html
+if (window.location.pathname.includes("index.html")) {
+    window.addEventListener('DOMContentLoaded', setupVideoPopup); // Configurar el popup del video
+}
