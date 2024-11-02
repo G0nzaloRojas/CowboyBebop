@@ -27,7 +27,7 @@ body {
 header {
     background-color: #705b5bc2; 
     color: white; 
-    padding: 2%  0;  
+    padding: 2% 0;  
     display: flex;
     align-items: center; 
     justify-content: space-between;
@@ -48,33 +48,38 @@ header img {
 nav ul {
     display: flex; 
     justify-content: flex-end;
-    padding-left: 10px;
+    padding-left: 0; 
+    list-style: none; 
 }
 
 nav ul li {
-    margin: 0 10px; 
-    display: inline-block;
-    white-space: nowrap;
+    position: relative; 
 }
 
 nav ul li a {
     font-size: 1.2rem;
     text-transform: uppercase;
-    padding-right: 2%;
+    padding: 12px 20px; 
     color: whitesmoke; 
     text-decoration: none;
+    transition: background-color 0.3s, color 0.3s; 
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
-    font-weight: 800;
+    background-color: white; 
+    color: black; 
 }
 
 nav ul li ul {
     display: none;
-    position: absolute;
-    background-color: #705b5bc2;
-    padding: 10px;
+    position: absolute; 
+    left: 0;
+    top: 100%;
+    background-color: #352e2ec2;
+    padding: 0; 
+    z-index: 10;
+    white-space: nowrap; 
+    margin: 0; 
 }
 
 nav ul li:hover ul {
@@ -82,9 +87,21 @@ nav ul li:hover ul {
 }
 
 nav ul li ul li {
-    display: block;
-    margin: 10px 0;
+    display: block; 
+    margin: 0; 
+    padding: 10px 15px; 
 }
+
+nav ul li ul li a {
+    padding: 10px 20px;
+    color: whitesmoke; 
+}
+
+nav ul li ul li a:hover {
+    background-color: rgba(255, 255, 255, 0.1); 
+    color: whitesmoke; 
+}
+
 
 /* Media Queries */
 @media (max-width: 768px) {
