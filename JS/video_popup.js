@@ -5,11 +5,13 @@ function setupVideoPopup() {
     const video = document.getElementById('intro-video');
     const playButton = document.getElementById('play-button');
 
+    // Inicialmente ocultar la sección y el trailer
+    section.style.display = 'none'; 
+    trailer.style.display = 'none';
+
     // Mostrar el popup solo en la primera visita
     if (!sessionStorage.getItem('videoShown')) {
         videoPopup.style.display = 'flex'; 
-        section.style.display = 'none'; // Ocultar contenido
-        trailer.style.display = 'none'; // Ocultar trailer
 
         // Agregar evento al botón de reproducir
         playButton.addEventListener('click', () => {
@@ -57,3 +59,6 @@ function closeVideoPopup() {
     section.style.display = 'block'; // Mostrar contenido
     trailer.style.display = 'block'; // Mostrar el trailer
 }
+
+// Ejecutar la configuración del popup al cargar la página
+window.addEventListener('DOMContentLoaded', setupVideoPopup);
