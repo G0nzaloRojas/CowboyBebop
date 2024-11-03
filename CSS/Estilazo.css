@@ -295,7 +295,7 @@ footer a:nth-child(5):hover {
 }
 
 #video-popup {
-    display: none;
+    display: none; /* Inicialmente oculto */
     position: fixed;
     top: 0;
     left: 0;
@@ -305,7 +305,6 @@ footer a:nth-child(5):hover {
     justify-content: center; 
     align-items: center; 
     z-index: 999;
-    display: flex; 
     flex-direction: column; 
 }
 
