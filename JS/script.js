@@ -104,6 +104,16 @@ progressContainer.addEventListener('click', (e) => {
     audioPlayer.currentTime = (clickX / width) * duration;
 });
 
+// Reproducir la pista al hacer clic
+Array.from(tracklist.getElementsByTagName('li')).forEach((track, index) => {
+    track.addEventListener('click', () => {
+        currentTrackIndex = index;
+        loadTrack(currentTrackIndex);
+        togglePlayPause(); // Reproduce la pista al hacer clic
+    });
+});
+
+
 
 // Para que muestre el texto de las cartas en  Spike.html
 function toggleText(fullId, previewId) {

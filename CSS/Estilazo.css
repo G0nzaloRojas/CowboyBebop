@@ -798,7 +798,7 @@ main.analisis {
     border-radius: 10px;
     margin: 20px;
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
-    font-size: 16.5px;
+    font-size: 17px;
     font-family: 'Lato', serif;
 }
 
@@ -834,7 +834,12 @@ main.analisis {
     margin: 15px; 
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); 
     font-size: 17px;
-    font-family: 'Lato', sans-serif;
+    font-family: 'Lato', serif;
+    line-height: 1.6; 
+}
+
+.genero-article p {
+    margin-bottom: 15px; 
 }
 
 .genero-article h2 {
