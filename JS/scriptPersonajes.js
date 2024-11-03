@@ -29,7 +29,6 @@ backToTopButton.addEventListener('click', function(e) {
 });
 
 
-
 let currentPage = 0;
 const itemsPerPage = 3; // Número de episodios por página
 
@@ -65,4 +64,3 @@ function nextPage() {
 
 // Cargar episodios al inicio
 window.onload = displayEpisodes; // Ejecuta la función al cargar la página
-

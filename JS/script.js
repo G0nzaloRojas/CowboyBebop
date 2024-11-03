@@ -114,7 +114,6 @@ Array.from(tracklist.getElementsByTagName('li')).forEach((track, index) => {
 });
 
 
-
 // Para que muestre el texto de las cartas en  Spike.html
 function toggleText(fullId, previewId) {
     const fullText = document.getElementById(fullId);
