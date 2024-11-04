@@ -1103,7 +1103,7 @@ main.analisis {
 
 
 /* Media Queries */
-@media (max-width: 526px) {
+@media (max-width: 576px) {
     .icon {
         display: block; 
     }
