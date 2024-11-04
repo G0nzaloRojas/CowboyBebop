@@ -1164,9 +1164,8 @@ main.analisis {
     #trailer {
         width: 100%;
         height: 250px;
-        margin: 15px 0; /* Espacio reducido en pantallas pequeñas */
+        margin: 15px 0; 
     }
-
 
     footer {
         width: 100%; 
@@ -1179,7 +1178,7 @@ main.analisis {
         justify-content: center; 
         padding: 20px; 
         min-height: 50px; 
-        z-index: 100; /* Asegúrate de que el z-index sea menor que el del popup */
+        z-index: 100; 
     }
 
     footer a {
@@ -1200,30 +1199,28 @@ main.analisis {
     }
 
     #video-popup {
-        display: none; /* Oculto por defecto */
-        position: fixed; /* Fijo para cubrir toda la pantalla */
+        display: none; 
+        position: fixed; 
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
-        z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
-        justify-content: center; /* Centrar el video */
-        align-items: center; /* Centrar verticalmente */
+        background-color: rgba(0, 0, 0, 0.8); 
+        z-index: 1000;
+        justify-content: center; 
+        align-items: center; 
+    }
+
+    #intro-video {
+        max-width: 90%; 
+        max-height: 90%; 
     }
 
     body.video-popup-active footer {
-        display: none; /* Oculta el footer cuando el popup está activo */
+        display: none; 
     }
 
-
-    #intro-video {
-        max-width: 90%; /* Tamaño máximo del video */
-        max-height: 90%; /* Tamaño máximo del video */
-    }
-
-
-
+    
     /* EPISODIOS.html */
     #menu-cafe-titulo {
         font-size: 1.5rem; 
