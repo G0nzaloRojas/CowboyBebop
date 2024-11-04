@@ -415,11 +415,11 @@ main.analisis {
     font-family: 'Lato', sans-serif;
 }
 
-.video-trailer {
+.video-analisis {
     width: 40%;
 }
 
-.video-trailer iframe {
+.video-analisis iframe {
     width: 100%;
 }
 
@@ -1125,8 +1125,8 @@ main.analisis {
     }
 
     nav ul li {
-        margin: 10px 0; /* Espacio entre las opciones del menú */
-        padding: 5px; /* Espacio dentro de cada opción del menú */
+        margin: 10px 0;
+        padding: 5px; 
         z-index: 1000;
     }
 
@@ -1214,6 +1214,9 @@ main.analisis {
     #intro-video {
         max-width: 90%; 
         max-height: 90%; 
+        margin: 20px auto; 
+        display: block; 
+        border: none;
     }
 
     body.video-popup-active footer {
@@ -1222,43 +1225,54 @@ main.analisis {
 
     
     /* EPISODIOS.html */
+    .menu-cafe {
+        padding: 0 15px; 
+    }
+
     #menu-cafe-titulo {
         font-size: 1.5rem; 
+        margin: 20px 0; 
     }
 
     .platillo {
-        padding: 15.5px; 
-        margin: 10px; 
+        padding: 10px; 
+        margin: 10px 0; 
+        border: 1px solid transparent; 
     }
 
     .platillo h2 {
         font-size: 20px; 
+        margin: 10px 0; 
     }
 
     .platillo p {
         font-size: 15.5px;
+        margin: 5px 0; 
     }
 
     .navegacion {
         margin-top: 15px; 
+        padding: 0 10px; 
     }
 
     .navegacion button {
         font-size: 15px; 
-    }
+        margin: 5px; 
+    } 
 
     /*  ANALISIS.html */
     main.analisis {
         flex: 25;
-        margin-top: 1em; 
-        margin-bottom: 1em; 
+        margin: 1em; 
+        padding: 0 10px;
     }
 
     #title-reflexion {
-        font-size: 26px; /
+        font-size: 26px;
     }
 
     .contenido-analisis {
+        display: flex; 
         flex-direction: column; 
         padding: 10px; 
     }
@@ -1268,13 +1282,20 @@ main.analisis {
         font-size: 15.5px; 
     }
 
-    .video-trailer {
-        width: 100%; 
-        margin-bottom: 15px;
+    .video-analisis {
+        width: calc(100% - 20px); 
+        margin: 0 10px 15px; 
+        position: relative; 
+        padding-bottom: 56.25%;
+        height: 0; 
     }
 
-    .video-trailer iframe {
-        height: 100px;
+    .video-analisis iframe {
+        position: absolute; 
+        top: 0; 
+        left: 0; 
+        width: 100%; 
+        height: 100%;
     }
 
     /* SPIKE.html */
@@ -1304,11 +1325,15 @@ main.analisis {
     .card-container {
         flex-direction: column; 
         align-items: center; 
+        padding: 20px; 
     }
 
     .card {
         max-width: 100%; 
         margin: 20px 0; 
+        padding: 15px; 
+        border-radius: 8px; 
+        background-color: #f9f9f9; 
     }
 
     .card .card-content h3 {
