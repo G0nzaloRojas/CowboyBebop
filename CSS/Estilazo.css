@@ -44,6 +44,7 @@ header img {
     margin-right: 20px;
 }
 
+/* Estilos para el menú principal */
 nav ul {
     display: flex; 
     justify-content: flex-end;
@@ -69,9 +70,9 @@ nav ul li a:hover {
     color: black; 
 }
 
-/* Ocultar submenús por defecto */
-nav ul li ul {
-    display: none; /* Ocultar submenús */
+/* Submenús ocultos por defecto */
+nav ul li ul.submenu {
+    display: none; /* Ocultos por defecto */
     position: absolute; 
     left: 0;
     top: 100%;
@@ -82,11 +83,12 @@ nav ul li ul {
     margin: 0; 
 }
 
-/* Mostrar submenús cuando el padre tiene la clase 'active' */
-nav ul li.active > ul {
-    display: block; /* Mostrar submenús */
+/* Mostrar submenú en desktop cuando se hace hover */
+nav ul li:hover > ul.submenu {
+    display: block; 
 }
 
+/* Elementos del submenú */
 nav ul li ul li {
     display: block; 
     margin: 0; 
@@ -1107,44 +1109,33 @@ main.analisis {
 /* Media Queries */
 @media (max-width: 526px) {
     .icon {
-        display: block; 
+        display: block; /* Mostrar icono hamburguesa en dispositivos móviles */
     }
 
     nav ul {
-        display: none; 
+        display: none; /* Ocultar menú por defecto en móvil */
         flex-direction: column;
         position: absolute;
         background-color: #333;
         top: 70px;
         right: 0;
         width: 100%;
-        z-index: 1000;
-        padding: 10px; 
     }
 
+    /* Mostrar menú al activar la clase 'responsive' */
     nav.responsive ul {
-        display: flex; 
+        display: flex; /* Cambia a flex para mantener alineación en columna */
     }
 
-    nav ul li {
-        margin: 5px; 
-        padding: 10px; 
-        text-align: center;
-        position: relative;
+    nav ul li ul.submenu {
+        position: static; /* Submenú en posición estática */
     }
 
-    nav ul li ul {
-        display: none; 
-        position: relative;
-        background-color: #444;
-        width: 100%;
-        z-index: 999;
+    /* Mostrar submenú solo si tiene la clase 'show' en móvil */
+    nav ul li ul.submenu.show {
+        display: block;
     }
-
-    nav ul li.active > ul {
-        display: block; 
-    }
-
+    
     #Img img {
         width: 100%; 
         margin: 0 10px;
@@ -1177,8 +1168,8 @@ main.analisis {
         flex-direction: column; 
         align-items: center;
         justify-content: center; 
-        padding: 20px; /* Puedes ajustar esto según sea necesario */
-        min-height: 50px; /* Asegura que tenga una altura mínima */
+        padding: 20px; 
+        min-height: 50px; 
     }
 
     footer a {
