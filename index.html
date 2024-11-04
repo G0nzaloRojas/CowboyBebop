@@ -23,22 +23,25 @@
             <a href="index.html"><img src="Images/Logo.png" alt="Cowboy logo"></a>
         </div>
         <a href="javascript:void(0);" class="icon" onclick="toggleMenu()"><i class="fa fa-bars"></i></a>
-        <nav id="Menu" class="">
+        <nav id="Menu">
             <ul id="menu_bar">    
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">Sobre el Anime</a>
+                <li>
+                    <a href="#">Sobre el Anime</a>
                     <ul>
                         <li><a href="episodios.html">Episodios</a></li>
                         <li><a href="analisis.html">Analisis</a></li>
                     </ul>
                 </li> 
-                <li><a href="#">Personajes</a>
+                <li>
+                    <a href="#">Personajes</a>
                     <ul>
                         <li><a href="spike.html">Principal</a></li>
                         <li><a href="personajes.html">Secundarios</a></li>
                     </ul>
                 </li> 
-                <li><a href="#">Banda Sonora</a>
+                <li>
+                    <a href="#">Banda Sonora</a>
                     <ul>
                         <li><a href="reproductor.html">Reproductor</a></li>
                         <li><a href="influencia.html">Influencia</a></li>
@@ -49,7 +52,7 @@
             </ul>
         </nav>
     </header>
-  
+    
     <div id="video-popup"> 
         <video id="intro-video"  controls>
             <source src="Video/Opening.mp4" type="video/mp4">
@@ -57,9 +60,7 @@
         </video>
         <button id="play-button">Reproducir Video</button>
     </div>
-    
-    
-    
+
     <section id="section" style="display:none;"> 
         <div id="Img">
             <img src="Images/Cowboy_Bebop.png" alt="Cowboy Bebop logo">
@@ -91,18 +92,43 @@
             <p>© 2024 All rights reserved to Rojas Martinez Gonzalo A.</p>
         </footer>
     </div>
+    
 
     <script type="text/javascript">
-        function toggleMenu() {
-            var menu = document.getElementById("Menu");
-            if (menu.className === "") {
-                menu.className = "responsive";
-            } else {
-                menu.className = "";
+        document.addEventListener("DOMContentLoaded", function() {
+            // Función para alternar el menú en dispositivos móviles
+            function toggleMenu() {
+                var menu = document.getElementById("Menu");
+                menu.classList.toggle("responsive"); // Alternar la clase 'responsive'
             }
-        }
+    
+            // Manejar los clics en los enlaces del menú principal
+            var subMenuLinks = document.querySelectorAll("nav ul li > a");
+            subMenuLinks.forEach(link => {
+                if (link.nextElementSibling && link.nextElementSibling.tagName === "UL") {
+                    link.addEventListener("click", function(event) {
+                        event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
+    
+                        var parentLi = this.parentElement; // Obtener el <li> padre
+                        parentLi.classList.toggle("active"); // Alternar la clase 'active'
+                        
+                        // Cerrar otros submenús
+                        var allItems = document.querySelectorAll("nav ul li");
+                        allItems.forEach(function(item) {
+                            if (item !== parentLi) {
+                                item.classList.remove("active");
+                            }
+                        });
+                    });
+                }
+            });
+    
+            // Asignar la función toggleMenu al icono de menú
+            document.querySelector('.icon').addEventListener('click', toggleMenu);
+        });
     </script>
-
+    
+    
     <a href="#" class="back-to-top"> 
         <span class="material-icons">arrow_upward</span>
     </a>

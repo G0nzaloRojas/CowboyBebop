@@ -14,7 +14,6 @@ body {
     background-image: url('../Images/Fondo.png');
 }
 
-
 .icon {
     display: none; 
     color: white;
@@ -72,7 +71,7 @@ nav ul li a:hover {
 }
 
 nav ul li ul {
-    display: none;
+    display: none; /* Ocultar submenús por defecto */
     position: absolute; 
     left: 0;
     top: 100%;
@@ -80,11 +79,10 @@ nav ul li ul {
     padding: 0; 
     z-index: 10;
     white-space: nowrap; 
-    margin: 0; 
 }
 
-nav ul li:hover ul {
-    display: block; 
+nav ul li.active > ul {
+    display: block; /* Mostrar submenús cuando el padre tiene la clase 'active' */
 }
 
 nav ul li ul li {
@@ -103,43 +101,9 @@ nav ul li ul li a:hover {
     color: whitesmoke; 
 }
 
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .icon {
-        display: block; /* Mostrar icono hamburguesa en dispositivos móviles */
-    }
-
-    nav ul {
-        display: none; /* Ocultar menú por defecto en móvil */
-        flex-direction: column;
-        position: absolute;
-        background-color: #333;
-        top: 70px;
-        right: 0;
-        width: 100%;
-    }
-
-    nav ul li {
-        margin: 0;
-        padding: 10px;
-        text-align: center;
-    }
-
-    nav ul li a {
-        font-size: 1.5rem;
-    }
-
-    /* Clase responsive para mostrar el menú en móvil al hacer clic */
-    nav.responsive ul {
-        display: flex; /* Cambia a flex para mantener alineación en columna */
-    }
-}
-
 a {
     cursor: url('../Images/Pointer.png'), auto; 
 }
-
 
 #Img {
     display: flex;
@@ -191,7 +155,7 @@ a {
     border-radius: 10px; 
 }
 
-#trailer{
+#trailer {
     display: block;
     margin: 0 auto 40px;
     max-width: 100%;
@@ -208,7 +172,8 @@ footer {
     flex-direction: column; 
     align-items: center; 
     justify-content: center; 
-    height: 150px;
+    min-height: 150px; /* Cambiado de height a min-height */
+    padding: 20px; /* Añadir padding para espacio interior */
     background: radial-gradient(circle at bottom, #000 0%, #111 100%);
     position: relative;
     overflow: hidden;
@@ -219,14 +184,14 @@ footer {
 
 footer .social-links {
     display: flex; 
-    justify-content: center; 
+    align-items: center; /* Centrado en horizontal */
     margin-bottom: 10px;
 }
 
 footer p {
     text-align: center; 
     color: white;
-    font-family: 'Lato',sans-serif;
+    font-family: 'Lato', sans-serif;
     font-style: italic;
     font-size: 17px;
 }
@@ -330,7 +295,7 @@ footer a:nth-child(5):hover {
 }
 
 
-/*EPISODIOS*/
+
 .menu-cafe {
     max-width: 1200px;
     margin: 40px auto;
@@ -346,7 +311,6 @@ footer a:nth-child(5):hover {
     font-size: 2.5rem; 
     margin-bottom: 20px; 
     font-family: 'Pacifico', cursive;
-    font-size: 35px;
 }
 
 .platillo {
@@ -370,8 +334,6 @@ footer a:nth-child(5):hover {
     border-radius: 5px;
     margin-bottom: 10px; 
     display: block; 
-    margin-left: auto; 
-    margin-right: auto; 
 }
 
 .platillo p {
@@ -382,13 +344,12 @@ footer a:nth-child(5):hover {
     font-family: 'Lato', sans-serif;
 }
 
-.platillo h2{
+.platillo h2 {
     text-align: center;
     font-family: 'Pacifico', cursive;
     color: #28c5e9cc;
     font-size: 25px;
 }
-
 
 .platillo strong {
     color: #fff; 
@@ -409,10 +370,11 @@ footer a:nth-child(5):hover {
     border: none; 
     padding: 10px 15px; 
     margin: 0 10px; 
-    cursor: url('../Images/Pointer.png') , auto; 
+    cursor: url('../Images/Pointer.png'), auto; 
     border-radius: 5px; 
     font-size: 16px;
     font-family: 'Courier New', monospace;
+    transition: background-color 0.3s;
 }
 
 .navegacion button:hover {
@@ -1135,4 +1097,220 @@ main.analisis {
 
 .back-to-top:hover span {
     transform: translateY(-4px);
+}
+
+
+/* Media Queries */
+@media (max-width: 526px) {
+    .icon {
+        display: block; /* Mostrar icono hamburguesa en dispositivos móviles */
+    }
+
+    nav ul {
+        display: none; /* Ocultar menú por defecto en móvil */
+        flex-direction: column;
+        position: absolute;
+        background-color: #333;
+        top: 70px;
+        right: 0;
+        width: 100%;
+        z-index: 1000;
+    }
+
+    nav.responsive ul {
+        display: flex; /* Mostrar menú en móvil al hacer clic */
+    }
+
+    nav ul li {
+        margin: 0;
+        padding: 10px;
+        text-align: center;
+        position: relative;
+    }
+
+    nav ul li a {
+        font-size: 1.5rem; /* Aumentar tamaño de fuente en móvil */
+        color: #fff; /* Cambiar color del texto para mejor contraste */
+    }
+
+    nav ul li ul {
+        display: none; /* Ocultar submenús por defecto */
+        position: relative; /* Cambiado de absolute a relative */
+        background-color: #444;
+        width: 100%;
+        z-index: 999;
+    }
+
+    nav ul li.active > ul { 
+        display: block; /* Mostrar submenús cuando el padre tiene la clase 'active' */
+    }
+
+    nav ul li ul li {
+        text-align: center;
+        padding: 10px;
+    }
+
+    #Img img {
+        width: 100%; /* Imágenes a ancho completo */
+    }
+
+    .article {
+        flex-direction: column; /* Apilar contenido de artículo */
+        padding: 10px; /* Reducir padding */
+    }
+
+    #titulo_article {
+        font-size: 30px; /* Título más pequeño */
+    }
+
+    #texto_article {
+        font-size: 15px; /* Texto más pequeño */
+    }
+
+    footer {
+        flex-direction: column; /* Apilar elementos del pie */
+        min-height: 100px; /* Cambiado de height a min-height */
+        padding: 20px; /* Añadir padding para espacio interior */
+    }
+
+    footer a {
+        width: 50px; /* Aumentar tamaño para mayor facilidad de uso */
+        height: 50px; 
+        margin: 5px; /* Añadir margen entre los botones */
+    }
+
+    .container-footer {
+        padding: 20px; /* Espaciado adicional para el pie de página */
+        text-align: center; /* Centrar texto en dispositivos móviles */
+    }
+
+    footer p {
+        font-size: 14px; /* Ajustar tamaño del texto */
+        line-height: 1.5; /* Mejora la legibilidad */
+    }
+
+    /* Estilos específicos de episodios */
+    #menu-cafe-titulo {
+        font-size: 1.5rem; /* Ajustar tamaño del título en móviles */
+    }
+
+    .platillo {
+        padding: 15px; /* Reducir padding en móviles */
+        margin: 10px; /* Reducir márgenes entre platillos */
+    }
+
+    .platillo h2 {
+        font-size: 20px; /* Más pequeño en pantallas muy pequeñas */
+    }
+
+    .platillo p {
+        font-size: 14px; /* Reducir tamaño del texto */
+    }
+
+    .navegacion {
+        margin-top: 15px; /* Ajustar margen en navegación */
+    }
+
+    .navegacion button {
+        font-size: 12px; /* Más pequeño en pantallas muy pequeñas */
+    }
+
+    /* Estilos de análisis */
+    main.analisis {
+        margin-top: 1em; /* Reducir margen superior en móvil */
+        margin-bottom: 1em; /* Reducir margen inferior en móvil */
+    }
+
+    #title-reflexion {
+        font-size: 24px; /* Reducir tamaño del título en móviles */
+    }
+
+    .contenido-analisis {
+        flex-direction: column; /* Apilar elementos en móviles */
+        padding: 10px; /* Reducir padding en móviles */
+    }
+
+    .texto_analisis {
+        width: 100%; /* Hacer ancho completo en móviles */
+        font-size: 15px; /* Ajustar tamaño de texto */
+    }
+
+    .video-trailer {
+        width: 100%; /* Ancho completo en móviles */
+        margin-bottom: 15px; /* Margen inferior en móviles */
+    }
+
+    .video-trailer iframe {
+        height: 200px; /* Ajustar altura del iframe en móviles */
+    }
+
+    /* Estilos de spike */
+    .spike-container {
+        flex-direction: column; /* Apilar elementos en móviles */
+        padding: 10px; /* Reducir padding en móviles */
+        margin: 10px; /* Reducir margen en móviles */
+    }
+
+    .spike-image {
+        max-width: 100%; /* Ajustar imagen a ancho completo */
+        margin: 0; /* Sin margen derecho */
+    }
+
+    .spike-description h1 {
+        font-size: 28px; /* Reducir tamaño del título */
+    }
+
+    .spike-description p {
+        font-size: 14px; /* Ajustar tamaño de texto */
+    }
+
+    .section-title {
+        font-size: 28px; /* Reducir tamaño del título de sección */
+    }
+
+    .card-container {
+        flex-direction: column; /* Apilar tarjetas en móviles */
+        align-items: center; /* Centrar tarjetas */
+    }
+
+    .card {
+        max-width: 100%; /* Ajustar tarjetas a ancho completo */
+        margin: 10px 0; /* Espacio entre tarjetas */
+    }
+
+    .card .card-content h3 {
+        font-size: 24px; /* Reducir tamaño del título en tarjetas */
+    }
+
+    .card .card-content p {
+        font-size: 14px; /* Reducir tamaño del texto en tarjetas */
+    }
+
+    /* Estilos de personajes */
+    .titulo-principal {
+        font-size: 28px; /* Reducir tamaño del título principal */
+    }
+
+    .personajes {
+        margin-bottom: 20px; /* Reducir margen inferior */
+    }
+
+    .jet-content, .faye-content, .ed-content {
+        flex-direction: column; /* Apilar contenido en móviles */
+        padding: 10px; /* Reducir padding */
+        margin: 10px; /* Reducir márgenes */
+    }
+
+    .jet-image, .faye-image, .ed-image {
+        max-width: 100%; /* Ajustar imágenes a ancho completo */
+        margin: 0; /* Sin margen derecho */
+    }
+
+    .jet-description h2, .faye-description h3, .ed-description h4 {
+        font-size: 28px; /* Reducir tamaño de los títulos de los personajes */
+    }
+
+    .jet-description p, .ed-description p {
+        font-size: 15px; /* Ajustar tamaño del texto */
+    }
 }
