@@ -44,7 +44,6 @@ header img {
     margin-right: 20px;
 }
 
-/* Estilos para el menú principal */
 nav ul {
     display: flex; 
     justify-content: flex-end;
@@ -70,9 +69,8 @@ nav ul li a:hover {
     color: black; 
 }
 
-/* Submenús ocultos por defecto */
 nav ul li ul.submenu {
-    display: none; /* Ocultos por defecto */
+    display: none; 
     position: absolute; 
     left: 0;
     top: 100%;
@@ -83,12 +81,10 @@ nav ul li ul.submenu {
     margin: 0; 
 }
 
-/* Mostrar submenú en desktop cuando se hace hover */
 nav ul li:hover > ul.submenu {
     display: block; 
 }
 
-/* Elementos del submenú */
 nav ul li ul li {
     display: block; 
     margin: 0; 
@@ -176,20 +172,20 @@ footer {
     flex-direction: column; 
     align-items: center; 
     justify-content: center; 
-    min-height: 150px; /* Cambiado de height a min-height */
-    padding: 20px; /* Añadir padding para espacio interior */
+    min-height: 150px; 
+    padding: 20px; 
     background: radial-gradient(circle at bottom, #000 0%, #111 100%);
     position: relative;
     overflow: hidden;
     border-radius: 50% 50% 0 0;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-    margin-top: auto; /* Esto es clave */
+    margin-top: auto; 
 }
 
 
 footer .social-links {
     display: flex; 
-    align-items: center; /* Centrado en horizontal */
+    align-items: center;
     margin-bottom: 10px;
 }
 
@@ -265,7 +261,7 @@ footer a:nth-child(5):hover {
 }
 
 #video-popup {
-    display: none; /* Inicialmente oculto */
+    display: none; 
     position: fixed;
     top: 0;
     left: 0;
@@ -389,7 +385,7 @@ footer a:nth-child(5):hover {
 
 /*ANALISIS*/
 main.analisis {
-    flex: 1; /* Permite que main ocupe el espacio restante */
+    flex: 1; 
     margin-top: 2em;
     margin-bottom: 2em; 
 }
@@ -1109,33 +1105,39 @@ main.analisis {
 /* Media Queries */
 @media (max-width: 526px) {
     .icon {
-        display: block; /* Mostrar icono hamburguesa en dispositivos móviles */
+        display: block; 
     }
 
+
     nav ul {
-        display: none; /* Ocultar menú por defecto en móvil */
+        display: none; 
         flex-direction: column;
         position: absolute;
         background-color: #333;
         top: 70px;
         right: 0;
         width: 100%;
+        z-index: 1000;
     }
 
-    /* Mostrar menú al activar la clase 'responsive' */
     nav.responsive ul {
-        display: flex; /* Cambia a flex para mantener alineación en columna */
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Espacio entre las opciones del menú */
+        padding: 5px; /* Espacio dentro de cada opción del menú */
+        z-index: 1000;
     }
 
     nav ul li ul.submenu {
-        position: static; /* Submenú en posición estática */
+        position: static; 
     }
 
-    /* Mostrar submenú solo si tiene la clase 'show' en móvil */
     nav ul li ul.submenu.show {
         display: block;
     }
-    
+
     #Img img {
         width: 100%; 
         margin: 0 10px;
@@ -1159,6 +1161,13 @@ main.analisis {
         margin: 0; 
     }
 
+    #trailer {
+        width: 100%;
+        height: 250px;
+        margin: 15px 0; /* Espacio reducido en pantallas pequeñas */
+    }
+
+
     footer {
         width: 100%; 
         margin: 0; 
@@ -1170,6 +1179,7 @@ main.analisis {
         justify-content: center; 
         padding: 20px; 
         min-height: 50px; 
+        z-index: 100; /* Asegúrate de que el z-index sea menor que el del popup */
     }
 
     footer a {
@@ -1188,6 +1198,31 @@ main.analisis {
         line-height: 1.5; 
         margin: 10px 0; 
     }
+
+    #video-popup {
+        display: none; /* Oculto por defecto */
+        position: fixed; /* Fijo para cubrir toda la pantalla */
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8); /* Fondo semi-transparente */
+        z-index: 1000; /* Asegúrate de que esté por encima de otros elementos */
+        justify-content: center; /* Centrar el video */
+        align-items: center; /* Centrar verticalmente */
+    }
+
+    body.video-popup-active footer {
+        display: none; /* Oculta el footer cuando el popup está activo */
+    }
+
+
+    #intro-video {
+        max-width: 90%; /* Tamaño máximo del video */
+        max-height: 90%; /* Tamaño máximo del video */
+    }
+
+
 
     /* EPISODIOS.html */
     #menu-cafe-titulo {
@@ -1242,7 +1277,7 @@ main.analisis {
     }
 
     .video-trailer iframe {
-        height: 200px;
+        height: 100px;
     }
 
     /* SPIKE.html */

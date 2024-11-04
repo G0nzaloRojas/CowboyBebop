@@ -12,6 +12,7 @@ function setupVideoPopup() {
     // Mostrar el popup solo en la primera visita
     if (!sessionStorage.getItem('videoShown')) {
         videoPopup.style.display = 'flex'; 
+        document.body.classList.add('video-popup-active'); // Agregar clase para ocultar el footer
 
         // Agregar evento al botón de reproducir
         playButton.addEventListener('click', () => {
@@ -58,6 +59,7 @@ function closeVideoPopup() {
     videoPopup.style.display = 'none'; // Cerrar el popup
     section.style.display = 'block'; // Mostrar contenido
     trailer.style.display = 'block'; // Mostrar el trailer
+    document.body.classList.remove('video-popup-active'); // Quitar clase para mostrar el footer
 }
 
 // Ejecutar la configuración del popup al cargar la página
