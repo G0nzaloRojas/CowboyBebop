@@ -1256,7 +1256,7 @@ main.analisis {
     }
 
     .navegacion button {
-        font-size: 15px; 
+        font-size: 15.5px; 
         margin: 5px; 
     } 
 
@@ -1268,7 +1268,7 @@ main.analisis {
     }
 
     #title-reflexion {
-        font-size: 26px;
+        font-size: 28px;
     }
 
     .contenido-analisis {
@@ -1315,7 +1315,7 @@ main.analisis {
     }
 
     .spike-description p {
-        font-size: 14px; 
+        font-size: 15.5px; 
     }
 
     .section-title {
@@ -1341,7 +1341,7 @@ main.analisis {
     }
 
     .card .card-content p {
-        font-size: 15px; 
+        font-size: 15.5px; 
     }
 
     /* PERSONAJES.html */
@@ -1368,7 +1368,7 @@ main.analisis {
         font-size: 28px; 
     }
 
-    .jet-description p, .ed-description p {
+    .jet-description p, .ed-description p , .faye-description p {
         font-size: 15.5px; 
     }
 
@@ -1399,15 +1399,15 @@ main.analisis {
     }
 
     .tracklist-section {
-        font-size: 15px; 
+        font-size: 15.5px; 
     }
 
     .tracklist-section h1 {
-        font-size: 30px; 
+        font-size: 28px; 
     }
 
     .track-list li {
-        font-size: 16px; 
+        font-size: 15.5px; 
     }
 
     .controls-section {
@@ -1430,7 +1430,7 @@ main.analisis {
     .influencia-article {
         padding: 15px; 
         margin: 10px;
-        font-size: 15px;
+        font-size: 15.5px;
     }
 
     .influencia-container {
@@ -1490,7 +1490,7 @@ main.analisis {
         width: 90%; 
         height: auto; 
         max-width: 300px; 
-        margin: 0; /* Sin margen lateral */
+        margin: 0; 
     }
 
     .articuloGaleria div a {
@@ -1499,15 +1499,19 @@ main.analisis {
 
     /*CONTACTO.html*/
     .logo {
-        font-size: 30px; 
+        font-size: 28px; 
     }
 
     .contact-wrapper {
         grid-template-columns: 1fr; 
+        max-width: 600px; 
+        margin: 0 auto; 
     }
 
     .contact-form form {
         grid-template-columns: 1fr; 
+         max-width: 100%;
+        padding: 0 15px;
     }
 
     .contact-form form .block {
@@ -1515,7 +1519,7 @@ main.analisis {
     }
 
     .contact-info h3, .contact-info p, .contact-info ul li {
-        font-size: 14px; 
+        font-size: 15.5px; 
     }
 
     .contact-info ul {
@@ -1529,11 +1533,13 @@ main.analisis {
     }
 
     .contact-form form button {
-        font-size: 14px; 
+        font-size: 15.5px; 
+        width: 100%; 
+        padding: 10px; 
     }
 
     .contact-form form p {
-        font-size: 14px; 
+        font-size: 15.5px; 
     }
 
    
