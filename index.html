@@ -95,39 +95,15 @@
     
 
     <script type="text/javascript">
-        document.addEventListener("DOMContentLoaded", function() {
-            // Función para alternar el menú en dispositivos móviles
-            function toggleMenu() {
-                var menu = document.getElementById("Menu");
-                menu.classList.toggle("responsive"); // Alternar la clase 'responsive'
+        function toggleMenu() {
+            var menu = document.getElementById("Menu");
+            if (menu.className === "") {
+                menu.className = "responsive";
+            } else {
+                menu.className = "";
             }
-    
-            // Manejar los clics en los enlaces del menú principal
-            var subMenuLinks = document.querySelectorAll("nav ul li > a");
-            subMenuLinks.forEach(link => {
-                if (link.nextElementSibling && link.nextElementSibling.tagName === "UL") {
-                    link.addEventListener("click", function(event) {
-                        event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
-    
-                        var parentLi = this.parentElement; // Obtener el <li> padre
-                        parentLi.classList.toggle("active"); // Alternar la clase 'active'
-                        
-                        // Cerrar otros submenús
-                        var allItems = document.querySelectorAll("nav ul li");
-                        allItems.forEach(function(item) {
-                            if (item !== parentLi) {
-                                item.classList.remove("active");
-                            }
-                        });
-                    });
-                }
-            });
-    
-            // Asignar la función toggleMenu al icono de menú
-            document.querySelector('.icon').addEventListener('click', toggleMenu);
-        });
+        }
     </script>
-    
     
     <a href="#" class="back-to-top"> 
         <span class="material-icons">arrow_upward</span>

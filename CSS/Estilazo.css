@@ -9,7 +9,6 @@ body {
     flex-direction: column;
     min-height: 100vh;
     margin: 0;
-    font-family: Arial, sans-serif;
     cursor: url('../Images/Cursor.png'), auto;
     background-image: url('../Images/Fondo.png');
 }
@@ -70,8 +69,9 @@ nav ul li a:hover {
     color: black; 
 }
 
+/* Ocultar submenús por defecto */
 nav ul li ul {
-    display: none; /* Ocultar submenús por defecto */
+    display: none; /* Ocultar submenús */
     position: absolute; 
     left: 0;
     top: 100%;
@@ -79,10 +79,12 @@ nav ul li ul {
     padding: 0; 
     z-index: 10;
     white-space: nowrap; 
+    margin: 0; 
 }
 
+/* Mostrar submenús cuando el padre tiene la clase 'active' */
 nav ul li.active > ul {
-    display: block; /* Mostrar submenús cuando el padre tiene la clase 'active' */
+    display: block; /* Mostrar submenús */
 }
 
 nav ul li ul li {
@@ -179,8 +181,9 @@ footer {
     overflow: hidden;
     border-radius: 50% 50% 0 0;
     box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
-    margin-top: auto;
+    margin-top: auto; /* Esto es clave */
 }
+
 
 footer .social-links {
     display: flex; 
@@ -384,6 +387,7 @@ footer a:nth-child(5):hover {
 
 /*ANALISIS*/
 main.analisis {
+    flex: 1; /* Permite que main ocupe el espacio restante */
     margin-top: 2em;
     margin-bottom: 2em; 
 }
@@ -1103,11 +1107,11 @@ main.analisis {
 /* Media Queries */
 @media (max-width: 526px) {
     .icon {
-        display: block; /* Debe ser visible */
+        display: block; 
     }
 
     nav ul {
-        display: none; /* Ocultar menú por defecto en móvil */
+        display: none; 
         flex-direction: column;
         position: absolute;
         background-color: #333;
@@ -1115,225 +1119,231 @@ main.analisis {
         right: 0;
         width: 100%;
         z-index: 1000;
+        padding: 10px; 
     }
 
     nav.responsive ul {
-        display: flex; /* Mostrar menú en móvil al hacer clic */
+        display: flex; 
     }
 
     nav ul li {
-        margin: 0;
-        padding: 10px;
+        margin: 5px; 
+        padding: 10px; 
         text-align: center;
         position: relative;
     }
 
-    nav ul li a {
-        font-size: 1.5rem; /* Aumentar tamaño de fuente en móvil */
-        color: #fff; /* Cambiar color del texto para mejor contraste */
-    }
-
     nav ul li ul {
-        display: none; /* Ocultar submenús por defecto */
-        position: relative; /* Cambiado de absolute a relative */
+        display: none; 
+        position: relative;
         background-color: #444;
         width: 100%;
         z-index: 999;
     }
 
-    nav ul li.active > ul { 
-        display: block; /* Mostrar submenús cuando el padre tiene la clase 'active' */
-    }
-
-    nav ul li ul li {
-        text-align: center;
-        padding: 10px;
+    nav ul li.active > ul {
+        display: block; 
     }
 
     #Img img {
-        width: 100%; /* Imágenes a ancho completo */
+        width: 100%; 
+        margin: 0 10px;
     }
 
     .article {
-        flex-direction: column; /* Apilar contenido de artículo */
-        padding: 10px; /* Reducir padding */
+        flex-direction: column; 
+        padding: 10px;
+        margin: 0 10px; 
     }
 
     #titulo_article {
-        font-size: 30px; /* Título más pequeño */
+        font-size: 28px;
+        padding: 10px; 
+        margin: 0; 
     }
 
     #texto_article {
-        font-size: 15px; /* Texto más pequeño */
+        font-size: 15.5px; 
+        padding: 10px; 
+        margin: 0; 
     }
 
     footer {
-        flex-direction: column; /* Apilar elementos del pie */
-        min-height: 100px; /* Cambiado de height a min-height */
-        padding: 20px; /* Añadir padding para espacio interior */
+        width: 100%; 
+        margin: 0; 
+        background-color: #333; 
+        color: white; 
+        display: flex;
+        flex-direction: column; 
+        align-items: center;
+        justify-content: center; 
+        padding: 20px; /* Puedes ajustar esto según sea necesario */
+        min-height: 50px; /* Asegura que tenga una altura mínima */
     }
 
     footer a {
-        width: 50px; /* Aumentar tamaño para mayor facilidad de uso */
+        width: 50px; 
         height: 50px; 
-        margin: 5px; /* Añadir margen entre los botones */
+        margin: 5px;
     }
 
     .container-footer {
-        padding: 20px; /* Espaciado adicional para el pie de página */
-        text-align: center; /* Centrar texto en dispositivos móviles */
+        padding: 0; 
+        text-align: center;
     }
 
     footer p {
-        font-size: 14px; /* Ajustar tamaño del texto */
-        line-height: 1.5; /* Mejora la legibilidad */
+        font-size: 15.5px; 
+        line-height: 1.5; 
+        margin: 10px 0; 
     }
 
-    /* Estilos específicos de episodios */
+    /* EPISODIOS.html */
     #menu-cafe-titulo {
-        font-size: 1.5rem; /* Ajustar tamaño del título en móviles */
+        font-size: 1.5rem; 
     }
 
     .platillo {
-        padding: 15px; /* Reducir padding en móviles */
-        margin: 10px; /* Reducir márgenes entre platillos */
+        padding: 15.5px; 
+        margin: 10px; 
     }
 
     .platillo h2 {
-        font-size: 20px; /* Más pequeño en pantallas muy pequeñas */
+        font-size: 20px; 
     }
 
     .platillo p {
-        font-size: 14px; /* Reducir tamaño del texto */
+        font-size: 15.5px;
     }
 
     .navegacion {
-        margin-top: 15px; /* Ajustar margen en navegación */
+        margin-top: 15px; 
     }
 
     .navegacion button {
-        font-size: 12px; /* Más pequeño en pantallas muy pequeñas */
+        font-size: 15px; 
     }
 
-    /* Estilos de análisis */
+    /*  ANALISIS.html */
     main.analisis {
-        margin-top: 1em; /* Reducir margen superior en móvil */
-        margin-bottom: 1em; /* Reducir margen inferior en móvil */
+        flex: 25;
+        margin-top: 1em; 
+        margin-bottom: 1em; 
     }
 
     #title-reflexion {
-        font-size: 24px; /* Reducir tamaño del título en móviles */
+        font-size: 26px; /
     }
 
     .contenido-analisis {
-        flex-direction: column; /* Apilar elementos en móviles */
-        padding: 10px; /* Reducir padding en móviles */
+        flex-direction: column; 
+        padding: 10px; 
     }
 
     .texto_analisis {
-        width: 100%; /* Hacer ancho completo en móviles */
-        font-size: 15px; /* Ajustar tamaño de texto */
+        width: 100%; 
+        font-size: 15.5px; 
     }
 
     .video-trailer {
-        width: 100%; /* Ancho completo en móviles */
-        margin-bottom: 15px; /* Margen inferior en móviles */
+        width: 100%; 
+        margin-bottom: 15px;
     }
 
     .video-trailer iframe {
-        height: 200px; /* Ajustar altura del iframe en móviles */
+        height: 200px;
     }
 
-    /* Estilos de spike */
+    /* SPIKE.html */
     .spike-container {
-        flex-direction: column; /* Apilar elementos en móviles */
-        padding: 10px; /* Reducir padding en móviles */
-        margin: 10px; /* Reducir margen en móviles */
+        flex-direction: column;
+        padding: 10px; 
+        margin: 10px; 
     }
 
     .spike-image {
-        max-width: 100%; /* Ajustar imagen a ancho completo */
-        margin: 0; /* Sin margen derecho */
+        max-width: 100%; 
+        margin: 0;
     }
 
     .spike-description h1 {
-        font-size: 28px; /* Reducir tamaño del título */
+        font-size: 26px;
     }
 
     .spike-description p {
-        font-size: 14px; /* Ajustar tamaño de texto */
+        font-size: 14px; 
     }
 
     .section-title {
-        font-size: 28px; /* Reducir tamaño del título de sección */
+        font-size: 28px; 
     }
 
     .card-container {
-        flex-direction: column; /* Apilar tarjetas en móviles */
-        align-items: center; /* Centrar tarjetas */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .card {
-        max-width: 100%; /* Ajustar tarjetas a ancho completo */
-        margin: 10px 0; /* Espacio entre tarjetas */
+        max-width: 100%; 
+        margin: 20px 0; 
     }
 
     .card .card-content h3 {
-        font-size: 24px; /* Reducir tamaño del título en tarjetas */
+        font-size: 24px; 
     }
 
     .card .card-content p {
-        font-size: 14px; /* Reducir tamaño del texto en tarjetas */
+        font-size: 15px; 
     }
 
-    /* Estilos de personajes */
+    /* PERSONAJES.html */
     .titulo-principal {
-        font-size: 28px; /* Reducir tamaño del título principal */
+        font-size: 28px; 
     }
 
     .personajes {
-        margin-bottom: 20px; /* Reducir margen inferior */
+        margin-bottom: 20px; 
     }
 
     .jet-content, .faye-content, .ed-content {
-        flex-direction: column; /* Apilar contenido en móviles */
-        padding: 10px; /* Reducir padding */
-        margin: 10px; /* Reducir márgenes */
+        flex-direction: column; 
+        padding: 10px; 
+        margin: 10px; 
     }
 
     .jet-image, .faye-image, .ed-image {
-        max-width: 100%; /* Ajustar imágenes a ancho completo */
-        margin: 0; /* Sin margen derecho */
+        max-width: 100%; 
+        margin: 0; 
     }
 
     .jet-description h2, .faye-description h3, .ed-description h4 {
-        font-size: 28px; /* Reducir tamaño de los títulos de los personajes */
+        font-size: 28px; 
     }
 
     .jet-description p, .ed-description p {
-        font-size: 15px; /* Ajustar tamaño del texto */
+        font-size: 15.5px; 
     }
 
-    /* Estilos de reproductor */
+    /* REPRODUCTOR.html */
     .player-page {
-        margin: 20px; /* Reducir margen en móviles */
-        padding: 10px; /* Añadir padding para un mejor espaciado */
+        margin: 20px; 
+        padding: 10px; 
     }
 
     .content {
-        flex-direction: column; /* Apilar contenido en móviles */
-        align-items: center; /* Centrar contenido */
+        flex-direction: column; 
+        align-items: center;
     }
 
     .album-section {
-        margin-right: 0; /* Quitar margen derecho */
-        margin-left: 0; /* Quitar margen izquierdo */
-        flex: 1; /* Tomar todo el ancho disponible */
-        padding: 10px; /* Añadir padding */
+        margin-right: 0;
+        margin-left: 0; 
+        flex: 1; 
+        padding: 10px; 
     }
 
     .album-cover-wrapper {
-        height: 250px; /* Reducir altura en móviles */
+        height: 250px; 
     }
 
     .cd-disc {
@@ -1341,139 +1351,145 @@ main.analisis {
     }
 
     .tracklist-section {
-        font-size: 15px; /* Reducir tamaño de texto */
+        font-size: 15px; 
     }
 
     .tracklist-section h1 {
-        font-size: 30px; /* Reducir tamaño del título */
+        font-size: 30px; 
     }
 
     .track-list li {
-        font-size: 16px; /* Reducir tamaño de texto de las pistas */
+        font-size: 16px; 
     }
 
     .controls-section {
-        margin-top: 10px; /* Reducir margen superior */
+        margin-top: 10px; 
     }
 
     .volume-control {
-        margin-left: 0; /* Quitar margen izquierdo en móviles */
+        margin-left: 0; 
     }
 
     .volume-slider {
-        width: 50%; /* Hacer el control de volumen más ancho */
+        width: 50%; 
     }
 
     /*INFLUENCIA.html*/
     .influencia-section {
-        padding: 10px; /* Reducir padding en móviles */
+        padding: 10px; 
     }
 
     .influencia-article {
-        padding: 15px; /* Reducir padding interno */
-        margin: 10px; /* Reducir margen entre artículos */
-        font-size: 15px; /* Ajustar tamaño de fuente */
+        padding: 15px; 
+        margin: 10px;
+        font-size: 15px;
     }
 
     .influencia-container {
-        flex-direction: column; /* Apilar imagen y descripción en móviles */
-        align-items: center; /* Centrar contenido */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .influencia-image {
-        max-width: 100%; /* Ajustar imagen a ancho completo */
-        margin-right: 0; /* Quitar margen derecho */
-        margin-bottom: 10px; /* Añadir margen inferior */
+        max-width: 100%; 
+        margin-right: 0; 
+        margin-bottom: 10px; 
     }
 
     .influencia-description {
-        text-align: center; /* Centrar texto en móviles */
+        text-align: center; 
     }
 
     #title-influencia {
-        font-size: 28px; /* Reducir tamaño del título */
+        font-size: 28px; 
     }
 
     .genero-article {
-        margin: 10px; /* Reducir margen */
+        margin: 10px; 
     }
 
     .genero-article h2 {
-        font-size: 28px; /* Reducir tamaño del título */
+        font-size: 28px; 
     }
 
     #title-sample {
-        font-size: 28px; /* Reducir tamaño del título */
+        font-size: 28px; 
     }
 
     .card_flip-container {
-        flex-direction: column; /* Apilar tarjetas en móviles */
-        align-items: center; /* Centrar tarjetas */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     /*GALERIA.html*/
     #h1Galeria {
-        font-size: 30px; /* Reducir tamaño del título */
-        margin: 10px 0; /* Ajustar márgenes */
+        font-size: 30px; 
+        margin: 10px 0; 
     }
 
     .articuloGaleria {
-        flex-direction: column; /* Apilar artículos en móviles */
-        align-items: center; /* Centrar artículos */
+        flex-direction: column; 
+        align-items: center; 
     }
 
     .articuloGaleria div {
-        flex-direction: column; /* Apilar imágenes y enlaces */
-        align-items: center; /* Centrar contenido dentro de cada div */
-        margin: 10px 0; /* Ajustar margen vertical */
+        flex-direction: column; 
+        align-items: center; 
+        margin: 10px 0; 
     }
 
     .articuloGaleria div img {
-        width: 90%; /* Hacer imágenes más anchas en móviles */
-        height: auto; /* Mantener proporciones */
-        max-width: 300px; /* Limitar el ancho máximo */
+        width: 90%; 
+        height: auto; 
+        max-width: 300px; 
+        margin: 0; /* Sin margen lateral */
     }
 
     .articuloGaleria div a {
-        margin: 5px 0; /* Ajustar margen entre enlaces */
+        margin: 5px 0; 
     }
 
     /*CONTACTO.html*/
     .logo {
-        font-size: 30px; /* Reducir tamaño del logo */
+        font-size: 30px; 
     }
 
     .contact-wrapper {
-        grid-template-columns: 1fr; /* Apilar columnas en móviles */
+        grid-template-columns: 1fr; 
     }
 
     .contact-form form {
-        grid-template-columns: 1fr; /* Hacer el formulario de una sola columna */
+        grid-template-columns: 1fr; 
     }
 
     .contact-form form .block {
-        grid-column: 1; /* Asegurarse de que el bloque ocupe toda la columna */
+        grid-column: 1;
     }
 
     .contact-info h3, .contact-info p, .contact-info ul li {
-        font-size: 14px; /* Reducir tamaño de fuente */
+        font-size: 14px; 
     }
 
     .contact-info ul {
-        padding: 0 10px; /* Ajustar padding en la lista */
+        padding: 0 10px; 
     }
 
     .gif-saludo {
-        width: 100%; /* Hacer la imagen más ancha en móviles */
-        max-width: 300px; /* Limitar ancho máximo */
-        margin: 0 auto; /* Centrar la imagen */
+        width: 100%; 
+        max-width: 300px; 
+        margin: 0 auto; 
     }
 
     .contact-form form button {
-        font-size: 14px; /* Reducir tamaño del botón */
+        font-size: 14px; 
     }
 
     .contact-form form p {
-        font-size: 14px; /* Reducir tamaño del texto en el formulario */
+        font-size: 14px; 
+    }
+
+   
+    * {
+        box-sizing: border-box; 
     }
 }
