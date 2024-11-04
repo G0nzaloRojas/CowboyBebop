@@ -1103,7 +1103,7 @@ main.analisis {
 /* Media Queries */
 @media (max-width: 526px) {
     .icon {
-        display: block; /* Mostrar icono hamburguesa en dispositivos móviles */
+        display: block; /* Debe ser visible */
     }
 
     nav ul {
@@ -1312,5 +1312,168 @@ main.analisis {
 
     .jet-description p, .ed-description p {
         font-size: 15px; /* Ajustar tamaño del texto */
+    }
+
+    /* Estilos de reproductor */
+    .player-page {
+        margin: 20px; /* Reducir margen en móviles */
+        padding: 10px; /* Añadir padding para un mejor espaciado */
+    }
+
+    .content {
+        flex-direction: column; /* Apilar contenido en móviles */
+        align-items: center; /* Centrar contenido */
+    }
+
+    .album-section {
+        margin-right: 0; /* Quitar margen derecho */
+        margin-left: 0; /* Quitar margen izquierdo */
+        flex: 1; /* Tomar todo el ancho disponible */
+        padding: 10px; /* Añadir padding */
+    }
+
+    .album-cover-wrapper {
+        height: 250px; /* Reducir altura en móviles */
+    }
+
+    .cd-disc {
+        display: none; 
+    }
+
+    .tracklist-section {
+        font-size: 15px; /* Reducir tamaño de texto */
+    }
+
+    .tracklist-section h1 {
+        font-size: 30px; /* Reducir tamaño del título */
+    }
+
+    .track-list li {
+        font-size: 16px; /* Reducir tamaño de texto de las pistas */
+    }
+
+    .controls-section {
+        margin-top: 10px; /* Reducir margen superior */
+    }
+
+    .volume-control {
+        margin-left: 0; /* Quitar margen izquierdo en móviles */
+    }
+
+    .volume-slider {
+        width: 50%; /* Hacer el control de volumen más ancho */
+    }
+
+    /*INFLUENCIA.html*/
+    .influencia-section {
+        padding: 10px; /* Reducir padding en móviles */
+    }
+
+    .influencia-article {
+        padding: 15px; /* Reducir padding interno */
+        margin: 10px; /* Reducir margen entre artículos */
+        font-size: 15px; /* Ajustar tamaño de fuente */
+    }
+
+    .influencia-container {
+        flex-direction: column; /* Apilar imagen y descripción en móviles */
+        align-items: center; /* Centrar contenido */
+    }
+
+    .influencia-image {
+        max-width: 100%; /* Ajustar imagen a ancho completo */
+        margin-right: 0; /* Quitar margen derecho */
+        margin-bottom: 10px; /* Añadir margen inferior */
+    }
+
+    .influencia-description {
+        text-align: center; /* Centrar texto en móviles */
+    }
+
+    #title-influencia {
+        font-size: 28px; /* Reducir tamaño del título */
+    }
+
+    .genero-article {
+        margin: 10px; /* Reducir margen */
+    }
+
+    .genero-article h2 {
+        font-size: 28px; /* Reducir tamaño del título */
+    }
+
+    #title-sample {
+        font-size: 28px; /* Reducir tamaño del título */
+    }
+
+    .card_flip-container {
+        flex-direction: column; /* Apilar tarjetas en móviles */
+        align-items: center; /* Centrar tarjetas */
+    }
+
+    /*GALERIA.html*/
+    #h1Galeria {
+        font-size: 30px; /* Reducir tamaño del título */
+        margin: 10px 0; /* Ajustar márgenes */
+    }
+
+    .articuloGaleria {
+        flex-direction: column; /* Apilar artículos en móviles */
+        align-items: center; /* Centrar artículos */
+    }
+
+    .articuloGaleria div {
+        flex-direction: column; /* Apilar imágenes y enlaces */
+        align-items: center; /* Centrar contenido dentro de cada div */
+        margin: 10px 0; /* Ajustar margen vertical */
+    }
+
+    .articuloGaleria div img {
+        width: 90%; /* Hacer imágenes más anchas en móviles */
+        height: auto; /* Mantener proporciones */
+        max-width: 300px; /* Limitar el ancho máximo */
+    }
+
+    .articuloGaleria div a {
+        margin: 5px 0; /* Ajustar margen entre enlaces */
+    }
+
+    /*CONTACTO.html*/
+    .logo {
+        font-size: 30px; /* Reducir tamaño del logo */
+    }
+
+    .contact-wrapper {
+        grid-template-columns: 1fr; /* Apilar columnas en móviles */
+    }
+
+    .contact-form form {
+        grid-template-columns: 1fr; /* Hacer el formulario de una sola columna */
+    }
+
+    .contact-form form .block {
+        grid-column: 1; /* Asegurarse de que el bloque ocupe toda la columna */
+    }
+
+    .contact-info h3, .contact-info p, .contact-info ul li {
+        font-size: 14px; /* Reducir tamaño de fuente */
+    }
+
+    .contact-info ul {
+        padding: 0 10px; /* Ajustar padding en la lista */
+    }
+
+    .gif-saludo {
+        width: 100%; /* Hacer la imagen más ancha en móviles */
+        max-width: 300px; /* Limitar ancho máximo */
+        margin: 0 auto; /* Centrar la imagen */
+    }
+
+    .contact-form form button {
+        font-size: 14px; /* Reducir tamaño del botón */
+    }
+
+    .contact-form form p {
+        font-size: 14px; /* Reducir tamaño del texto en el formulario */
     }
 }

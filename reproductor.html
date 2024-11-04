@@ -21,7 +21,8 @@
         <div>
             <a href="index.html"><img src="Images/Logo.png" alt="Cowboy logo"></a>
         </div>
-        <nav id="Menu">
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()"><i class="fa fa-bars"></i></a>
+        <nav id="Menu" class="">
             <ul id="menu_bar">    
                 <li><a href="index.html">Home</a></li>
                 <li><a href="#">Sobre el Anime</a>
@@ -128,14 +129,37 @@
     </a>
 
     <script type="text/javascript">
-        function toggleMenu() {
-            var menu = document.getElementById("Menu");
-            if (menu.className === "") {
-                menu.className = "responsive";
-            } else {
-                menu.className = "";
+        document.addEventListener("DOMContentLoaded", function() {
+            // Función para alternar el menú en dispositivos móviles
+            function toggleMenu() {
+                var menu = document.getElementById("Menu");
+                menu.classList.toggle("responsive"); // Alternar la clase 'responsive'
             }
-        }
+    
+            // Manejar los clics en los enlaces del menú principal
+            var subMenuLinks = document.querySelectorAll("nav ul li > a");
+            subMenuLinks.forEach(link => {
+                if (link.nextElementSibling && link.nextElementSibling.tagName === "UL") {
+                    link.addEventListener("click", function(event) {
+                        event.preventDefault(); // Evitar el comportamiento predeterminado del enlace
+    
+                        var parentLi = this.parentElement; // Obtener el <li> padre
+                        parentLi.classList.toggle("active"); // Alternar la clase 'active'
+                        
+                        // Cerrar otros submenús
+                        var allItems = document.querySelectorAll("nav ul li");
+                        allItems.forEach(function(item) {
+                            if (item !== parentLi) {
+                                item.classList.remove("active");
+                            }
+                        });
+                    });
+                }
+            });
+    
+            // Asignar la función toggleMenu al icono de menú
+            document.querySelector('.icon').addEventListener('click', toggleMenu);
+        });
     </script>
 
     <script src="JS/scriptPersonajes.js"></script>
