@@ -24,20 +24,20 @@
         <nav id="Menu">
             <ul id="menu_bar">    
                 <li><a href="index.html">Home</a></li>
-                <li><a href="#">Sobre el Anime</a>
-                    <ul>
+                <li><a href="javascript:void(0);" onclick="toggleSubmenu(event)">Sobre el Anime</a>
+                    <ul class="submenu">
                         <li><a href="episodios.html">Episodios</a></li>
                         <li><a href="analisis.html">Analisis</a></li>
                     </ul>
                 </li> 
-                <li><a href="#">Personajes</a>
-                    <ul>
+                <li><a href="javascript:void(0);" onclick="toggleSubmenu(event)">Personajes</a>
+                    <ul class="submenu">
                         <li><a href="spike.html">Principal</a></li>
                         <li><a href="personajes.html">Secundarios</a></li>
                     </ul>
                 </li> 
-                <li><a href="#">Banda Sonora</a>
-                    <ul>
+                <li><a href="javascript:void(0);" onclick="toggleSubmenu(event)">Banda Sonora</a>
+                    <ul class="submenu">
                         <li><a href="reproductor.html">Reproductor</a></li>
                         <li><a href="influencia.html">Influencia</a></li>
                     </ul>
@@ -105,11 +105,13 @@
     <script type="text/javascript">
         function toggleMenu() {
             var menu = document.getElementById("Menu");
-            if (menu.className === "") {
-                menu.className = "responsive";
-            } else {
-                menu.className = "";
-            }
+            menu.classList.toggle("responsive"); // Alterna la clase 'responsive' para el menú principal
+        }   
+
+        function toggleSubmenu(event) {
+            event.preventDefault();
+            var submenu = event.currentTarget.nextElementSibling;
+            submenu.classList.toggle("show"); 
         }
     </script>
 

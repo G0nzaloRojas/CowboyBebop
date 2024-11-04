@@ -95,18 +95,16 @@
     
 
     <script type="text/javascript">
-      function toggleMenu() {
-    var menu = document.getElementById("Menu");
-    menu.classList.toggle("responsive"); // Alterna la clase 'responsive' para el menú principal
-}
+        function toggleMenu() {
+            var menu = document.getElementById("Menu");
+            menu.classList.toggle("responsive"); // Alterna la clase 'responsive' para el menú principal
+        }   
 
-// Función para manejar los submenús en dispositivos móviles
-function toggleSubmenu(event) {
-    event.preventDefault(); // Evita que el enlace redirija
-    var submenu = event.currentTarget.nextElementSibling; // Selecciona el siguiente elemento UL (submenu)
-    submenu.classList.toggle("show"); // Alterna la clase "show" en el submenú
-}
-
+        function toggleSubmenu(event) {
+            event.preventDefault();
+            var submenu = event.currentTarget.nextElementSibling;
+            submenu.classList.toggle("show"); 
+        }
     </script>
     
     <a href="#" class="back-to-top"> 
