@@ -10,7 +10,8 @@ function setupVideoPopup() {
     section.style.display = 'none'; 
     trailer.style.display = 'none';
 
-    // Verifica si el video ha sido mostrado anteriormente
+    // Mostrar el popup solo en la primera visita
+    // Verifica si el video ya ha sido mostrado (usando sessionStorage)
     if (!sessionStorage.getItem('videoShown')) {
         // Si el video no ha sido mostrado, mostramos el popup
         videoPopup.style.display = 'flex'; 
@@ -23,7 +24,7 @@ function setupVideoPopup() {
         playButton.addEventListener('click', () => {
             video.muted = false; // Desmutear el video
             video.play().then(() => {
-                playButton.style.display = 'none'; // Ocultar botón de play al reproducir
+                playButton.style.display = 'none'; // Ocultar el botón de play al reproducir
             }).catch(error => {
                 console.error("Error al intentar reproducir el video: ", error);
             });
@@ -36,14 +37,17 @@ function setupVideoPopup() {
             closeVideoPopup(); // Cerrar el popup
         };
 
-        // Manejo de errores
+        // Manejo de errores (si el video no puede reproducirse)
         video.onerror = () => {
             console.error("Error al intentar reproducir el video.");
             closeVideoPopup(); // Cerrar el popup si hay error
         };
 
         // Agregar evento al botón de cerrar
-        closeButton.addEventListener('click', closeVideoPopup);
+        closeButton.addEventListener('click', () => {
+            sessionStorage.setItem('videoShown', 'true'); // Marcar como mostrado cuando se cierra el popup
+            closeVideoPopup();
+        });
         
     } else {
         // En visitas posteriores, asegurarse de que el popup esté oculto
