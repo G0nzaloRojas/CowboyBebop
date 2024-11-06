@@ -274,6 +274,7 @@ footer a:nth-child(5):hover {
     flex-direction: column; 
 }
 
+
 #intro-video {
     width: 100%; 
     height: auto; 
@@ -291,11 +292,22 @@ footer a:nth-child(5):hover {
     margin-top: 20px; 
 }
 
-#play-button:hover {
+#close-button {
+    background-color: #ff4081; 
+    color: white;
+    border: none; 
+    border-radius: 5px;
+    padding: 10px 20px; 
+    font-size: 16px; 
+    cursor: pointer; 
+    margin-top: 10px; 
+}
+
+#play-button:hover , #close-button:hover {
     background-color: #53098f; 
 }
 
-
+/*EPISODIOS*/
 
 .menu-cafe {
     max-width: 1200px;
